@@ -1,1 +1,25 @@
-{}
+{
+  "theme": {
+    "PHPNamespace": "Hexcode_Designs\\Site_Name",
+    "slug": "site-theme",
+    "name": "Site Theme",
+    "theme_uri": "https://github.com/dthenley/Custom-Theme-V2/",
+    "author": "Hexcode Designs",
+    "author_uri": "https://hexcodedesigns.com/",
+    "description": "A progressive theme development rig for WordPress.",
+    "version": "1.0.0"
+  },
+  "export": {
+    "compress": true,
+    "generatePotFile": true,
+    "filesToCopy": [
+      "LICENSE",
+      "readme.txt",
+      "screenshot.png",
+      "assets/css/vendor/**/*.css",
+      "assets/js/vendor/**/*.js",
+      "assets/svg/*.svg",
+      "inc/EZ_Customizer/themeCustomizeSettings.json"
+    ]
+  }
+}
