@@ -72,8 +72,6 @@
 	}
 
 	& > .main-navigation {
-		flex: 1 1 100%;
-
 		@media (--narrow-menu-query) {
 			position: fixed;
 			background: var(--color-theme-primary);
@@ -121,8 +119,6 @@
 				}
 
 				& a {
-					color: inherit;
-
 					@media (--narrow-menu-query) {
 						display: block;
 						padding: 1rem 0;
