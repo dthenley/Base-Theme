@@ -159,6 +159,10 @@ class Theme {
 			$components[] = new Jetpack\Component();
 		}
 
+		if ( class_exists( 'WooCommerce' ) ) {
+			$components[] = new Woocommerce\Component();
+		}
+
 		// if ( defined( 'WPSEO_Options' ) ) {
 		// 	$components[] = new Yoast\Component();
 		// }

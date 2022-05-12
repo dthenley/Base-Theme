@@ -1,0 +1,30 @@
+.single.woocommerce .site-main {
+	max-width: var(--content-wide-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+
+	& .product {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		& .woocommerce-product-gallery {
+			background: var(--wp--preset--color--gray);
+		}
+
+		& > .summary {
+			background: var(--wp--preset--color--gray);
+			padding: clamp(1rem, 3%, 3rem);
+
+			& .product_title {
+				font-size: 2.5rem;
+				margin-bottom: 0;
+			}
+
+			& .price {
+				font-size: 2.75rem;
+				color: inherit;
+			}
+		}
+	}
+}
