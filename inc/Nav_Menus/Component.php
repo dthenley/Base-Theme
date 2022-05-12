@@ -27,13 +27,7 @@ use function wp_nav_menu;
 class Component implements Component_Interface, Templating_Component_Interface {
 
 	const PRIMARY_NAV_MENU_SLUG = 'primary';
-
-	/**
-	 * All theme settings - from JSON file.
-	 *
-	 * @var $theme_settings array
-	 */
-	public $theme_settings;
+	const FOOTER_NAV_MENU_SLUG  = 'footer';
 
 	/**
 	 * Gets the unique identifier for the theme component.
@@ -48,18 +42,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
 	public function initialize() {
-		$this->get_theme_settings_config();
-		$this->hooks();
-	}
-
-	/**
-	 * Setup all hooks for the class.
-	 */
-	public function hooks() {
 		add_action( 'after_setup_theme', array( $this, 'action_register_nav_menus' ) );
 		add_filter( 'walker_nav_menu_start_el', array( $this, 'filter_primary_nav_menu_dropdown_symbol' ), 10, 4 );
-		add_filter( 'wp_rig_menu_toggle_button', array( $this, 'customize_mobile_menu_toggle' ) );
-		add_filter( 'wp_rig_site_navigation_classes', array( $this, 'customize_mobile_menu_nav_classes' ) );
 	}
 
 	/**
@@ -73,15 +57,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array(
 			'is_primary_nav_menu_active' => array( $this, 'is_primary_nav_menu_active' ),
 			'display_primary_nav_menu'   => array( $this, 'display_primary_nav_menu' ),
+			'is_footer_nav_menu_active'  => array( $this, 'is_footer_nav_menu_active' ),
+			'display_footer_nav_menu'    => array( $this, 'display_footer_nav_menu' ),
 		);
-	}
-
-	/**
-	 * Retrieves the theme settings from the JSON file and stores them in class-level variable.
-	 */
-	private function get_theme_settings_config() {
-		$theme_settings_json  = file_get_contents( get_theme_file_path() . '/inc/EZ_Customizer/themeCustomizeSettings.json' );
-		$this->theme_settings = apply_filters( 'wp_rig_customizer_settings', json_decode( $theme_settings_json, FILE_USE_INCLUDE_PATH ) );
 	}
 
 	/**
@@ -91,6 +69,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		register_nav_menus(
 			array(
 				static::PRIMARY_NAV_MENU_SLUG => esc_html__( 'Primary', 'wp-rig' ),
+				static::FOOTER_NAV_MENU_SLUG  => esc_html__( 'Footer', 'wp-rig' ),
 			)
 		);
 	}
@@ -140,6 +119,15 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
+	 * Checks whether the footer navigation menu is active.
+	 *
+	 * @return bool True if the primary navigation menu is active, false otherwise.
+	 */
+	public function is_footer_nav_menu_active() : bool {
+		return (bool) has_nav_menu( static::FOOTER_NAV_MENU_SLUG );
+	}
+
+	/**
 	 * Displays the primary navigation menu.
 	 *
 	 * @param array $args Optional. Array of arguments. See `wp_nav_menu()` documentation for a list of supported
@@ -156,23 +144,18 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
-	 * Displays the primary navigation menu.
+	 * Displays the footer navigation menu.
 	 *
-	 * @return string Mobile Nav Toggle HTML.
+	 * @param array $args Optional. Array of arguments. See `wp_nav_menu()` documentation for a list of supported
+	 *                    arguments.
 	 */
-	public function customize_mobile_menu_toggle() {
-		return '<button class="menu-toggle icon" aria-label="' . esc_html__( 'Open menu', 'wp-rig' ) . '" aria-controls="primary-menu" aria-expanded="false">
-					' . file_get_contents( get_theme_file_path() . '/assets/svg/menu-icon.svg' ) . '
-					' . file_get_contents( get_theme_file_path() . '/assets/svg/close-icon.svg' ) . '
-					</button>';
-	}
+	public function display_footer_nav_menu( array $args = array() ) {
+		if ( ! isset( $args['container'] ) ) {
+			$args['container'] = '';
+		}
 
-	/**
-	 * Displays the primary navigation menu.
-	 *
-	 * @return string Mobile Nav Toggle classes.
-	 */
-	public function customize_mobile_menu_nav_classes() {
-		return esc_html__( 'main-navigation nav--toggle-sub nav--toggle-small icon-nav', 'wp-rig' );
+		$args['theme_location'] = static::FOOTER_NAV_MENU_SLUG;
+
+		wp_nav_menu( $args );
 	}
 }

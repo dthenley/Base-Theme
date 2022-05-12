@@ -152,15 +152,16 @@ class Theme {
 			new Scripts\Component(),
 			new Excerpts\Component(),
 			new SVG\Component(),
+			new Yoast\Component(),
 		);
 
 		if ( defined( 'JETPACK__VERSION' ) ) {
 			$components[] = new Jetpack\Component();
 		}
 
-		if ( defined( 'WPSEO_Options' ) ) {
-			$components[] = new Yoast\Component();
-		}
+		// if ( defined( 'WPSEO_Options' ) ) {
+		// 	$components[] = new Yoast\Component();
+		// }
 
 		return $components;
 	}
