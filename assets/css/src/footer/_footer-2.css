@@ -24,7 +24,7 @@
 
 		@media (--wide-menu-query) {
 			display: grid;
-			grid-template-columns: 1fr auto;
+			grid-template-columns: 1fr auto 1fr;
 		}
 
 		& nav ul {
