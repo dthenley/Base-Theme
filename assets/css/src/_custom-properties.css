@@ -45,4 +45,16 @@
 	--color-theme-white: #ecf0f1;
 	--color-custom-daylight: #97c0b7;
 	--color-custom-sun: #eee9d1;
+
+	/* Button Styling */
+	--primary-button-background-color: var(--color-theme-secondary);
+	--primary-button-text-color: #fff;
+	--primary-button-hover-background-color: #fff;
+	--primary-button-hover-text-color: #000;
+	--secondary-button-background-color: #fff;
+	--secondary-button-text-color: #000;
+	--secondary-button-hover-background-color: #000;
+	--secondary-button-hover-text-color: #fff;
+	--global-button-padding: calc(0.667em + 2px) calc(1.333em + 2px);
+	--global-button-font-size: 1.125rem;
 }
