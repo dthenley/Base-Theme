@@ -207,6 +207,14 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	min-width: 14rem;
 }
 
-.gform_wrapper input[type="submit"] {
-	width: 100%;
+.gform_wrapper {
+	& input,
+	& textarea,
+	& select {
+		border-radius: 0;
+	}
+
+	& input[type="submit"] {
+		width: 100%;
+	}
 }
