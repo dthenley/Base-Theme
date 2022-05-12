@@ -1,0 +1,36 @@
+.site-header {
+	padding: 1em;
+	position: relative;
+	z-index: 10;
+
+	& .site-header--inner {
+		max-width: var(--content-wide-width);
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.header-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.custom-logo-link {
+	display: inline-block;
+	margin: 0 auto 1em;
+}
+
+.site-title {
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
