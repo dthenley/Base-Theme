@@ -39,3 +39,25 @@
 	text-decoration: none;
 	color: inherit;
 }
+
+.social-media-main-nav {
+	& svg {
+		fill: #000;
+	}
+
+	& > button {
+		display: none;
+	}
+
+	& > ul {
+		& li {
+			margin-right: 0;
+		}
+
+		& a {
+			padding: 0 !important;
+			font-size: 1.5rem;
+			transition: all 0.2s;
+		}
+	}
+}

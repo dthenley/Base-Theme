@@ -22,6 +22,13 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 <nav id="site-navigation" class="main-navigation nav--toggle-sub nav--toggle-small" aria-label="<?php esc_attr_e( 'Main menu', 'wp-rig' ); ?>">
 
-	<?php wp_rig()->display_primary_nav_menu( array( 'menu_id' => 'primary-menu' ) ); ?>
+	<?php
+	wp_rig()->display_primary_nav_menu(
+		array(
+			'menu_id' => 'primary-menu',
+			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="social-media-main-nav">'.do_shortcode("[yoast-social-media]").'</li></ul>'
+		)
+	);
+	?>
 
 </nav><!-- #site-navigation -->
