@@ -27,8 +27,11 @@
 		margin-right: auto;
 
 		@media (--wide-menu-query) {
-			display: grid;
-			grid-template-columns: 1fr auto;
+			display: flex;
+
+			& > nav {
+				flex: 1 1 100%;
+			}
 		}
 
 		& nav ul {
@@ -36,6 +39,10 @@
 			padding: 0;
 			display: flex;
 			flex-wrap: wrap;
+
+			@media (--wide-menu-query) {
+				justify-content: flex-end;
+			}
 
 			& li {
 				margin-left: 1rem;
