@@ -18,5 +18,5 @@ namespace WP_Rig\WP_Rig;
 	?>
 	<span class="sep"> | </span>
 
-	<?php printf( esc_html__( 'Site by %s ', 'wp-rig' ), '<a href="' . esc_url( 'Site by Hexcode Designs, LLC' ) . '">Hexcode Designs, LLC</a>' ); ?>
+	<?php printf( esc_html__( 'Site by %s ', 'wp-rig' ), '<a href="' . esc_url( 'https://hexcodedesigns.com/' ) . '" target="_blank">Hexcode Designs, LLC</a>' ); ?>
 </div><!-- .site-info -->
