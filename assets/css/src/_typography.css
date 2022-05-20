@@ -12,7 +12,7 @@ optgroup,
 textarea {
 	color: var(--global-font-color);
 	font-family: var(--global-font-family);
-	font-size: var(--font-size-regular);
+	font-size: var(--global-font-size);
 	line-height: var(--global-font-line-height);
 }
 /* stylelint-enable */
@@ -26,6 +26,18 @@ h6 {
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	clear: both;
+}
+
+h1 {
+	font-size: var(--font-size-heading-one);
+}
+
+h2 {
+	font-size: var(--font-size-heading-two);
+}
+
+h3 {
+	font-size: var(--font-size-heading-three);
 }
 
 .entry-title-singular,
@@ -59,7 +71,6 @@ blockquote {
 }
 
 @media (--content-query) {
-
 	.entry-content > blockquote {
 		margin-left: auto;
 	}

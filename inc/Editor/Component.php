@@ -48,6 +48,9 @@ class Component implements Component_Interface {
 		// Add support for wide-aligned images.
 		add_theme_support( 'align-wide' );
 
+		// Add Custom Spacing.
+		add_theme_support( 'custom-spacing' );
+
 		/**
 		 * Add support for color palettes.
 		 *
@@ -60,66 +63,31 @@ class Component implements Component_Interface {
 		 * add_theme_support( 'disable-custom-colors' );
 		 */
 
-		// add_theme_support(
-		// 	'editor-color-palette',
-		// 	array(
-		// 		array(
-		// 			'name'  => __( 'Primary', 'wp-rig' ),
-		// 			'slug'  => 'theme-primary',
-		// 			'color' => '#e36d60',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Secondary', 'wp-rig' ),
-		// 			'slug'  => 'theme-secondary',
-		// 			'color' => '#41848f',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Red', 'wp-rig' ),
-		// 			'slug'  => 'theme-red',
-		// 			'color' => '#C0392B',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Green', 'wp-rig' ),
-		// 			'slug'  => 'theme-green',
-		// 			'color' => '#27AE60',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Blue', 'wp-rig' ),
-		// 			'slug'  => 'theme-blue',
-		// 			'color' => '#2980B9',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Yellow', 'wp-rig' ),
-		// 			'slug'  => 'theme-yellow',
-		// 			'color' => '#F1C40F',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Black', 'wp-rig' ),
-		// 			'slug'  => 'theme-black',
-		// 			'color' => '#1C2833',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Grey', 'wp-rig' ),
-		// 			'slug'  => 'theme-grey',
-		// 			'color' => '#95A5A6',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'White', 'wp-rig' ),
-		// 			'slug'  => 'theme-white',
-		// 			'color' => '#ECF0F1',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Dusty daylight', 'wp-rig' ),
-		// 			'slug'  => 'custom-daylight',
-		// 			'color' => '#97c0b7',
-		// 		),
-		// 		array(
-		// 			'name'  => __( 'Dusty sun', 'wp-rig' ),
-		// 			'slug'  => 'custom-sun',
-		// 			'color' => '#eee9d1',
-		// 		),
-		// 	)
-		// );
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => __( 'Salmon', 'wp-rig' ),
+					'slug'  => 'theme-salmon',
+					'color' => '#b9273a',
+				),
+				array(
+					'name'  => __( 'Black', 'wp-rig' ),
+					'slug'  => 'theme-black',
+					'color' => '#000',
+				),
+				array(
+					'name'  => __( 'White', 'wp-rig' ),
+					'slug'  => 'theme-white',
+					'color' => '#fff',
+				),
+				array(
+					'name'  => __( 'Gray', 'wp-rig' ),
+					'slug'  => 'theme-gray',
+					'color' => '#f5f5f5',
+				),
+			)
+		);
 
 		/*
 		 * Add support custom font sizes.
@@ -127,35 +95,35 @@ class Component implements Component_Interface {
 		 * Add the line below to disable the custom color picker in the editor.
 		 * add_theme_support( 'disable-custom-font-sizes' );
 		 */
-		// add_theme_support(
-		// 	'editor-font-sizes',
-		// 	array(
-		// 		array(
-		// 			'name'      => __( 'Small', 'wp-rig' ),
-		// 			'shortName' => __( 'S', 'wp-rig' ),
-		// 			'size'      => 16,
-		// 			'slug'      => 'small',
-		// 		),
-		// 		array(
-		// 			'name'      => __( 'Medium', 'wp-rig' ),
-		// 			'shortName' => __( 'M', 'wp-rig' ),
-		// 			'size'      => 25,
-		// 			'slug'      => 'medium',
-		// 		),
-		// 		array(
-		// 			'name'      => __( 'Large', 'wp-rig' ),
-		// 			'shortName' => __( 'L', 'wp-rig' ),
-		// 			'size'      => 31,
-		// 			'slug'      => 'large',
-		// 		),
-		// 		array(
-		// 			'name'      => __( 'Larger', 'wp-rig' ),
-		// 			'shortName' => __( 'XL', 'wp-rig' ),
-		// 			'size'      => 39,
-		// 			'slug'      => 'larger',
-		// 		),
-		// 	)
-		// );
+		add_theme_support(
+			'editor-font-sizes',
+			array(
+				array(
+					'name'      => __( 'Regular', 'wp-rig' ),
+					'shortName' => __( 'R', 'wp-rig' ),
+					'size'      => 20,
+					'slug'      => 'regular',
+				),
+				array(
+					'name'      => __( 'Heading 3', 'wp-rig' ),
+					'shortName' => __( 'h3', 'wp-rig' ),
+					'size'      => 28,
+					'slug'      => 'heading-three',
+				),
+				array(
+					'name'      => __( 'Heading 2', 'wp-rig' ),
+					'shortName' => __( 'h2', 'wp-rig' ),
+					'size'      => 36,
+					'slug'      => 'heading-two',
+				),
+				array(
+					'name'      => __( 'Heading 1', 'wp-rig' ),
+					'shortName' => __( 'h1', 'wp-rig' ),
+					'size'      => 48,
+					'slug'      => 'heading-one',
+				),
+			)
+		);
 	}
 
 	/**
