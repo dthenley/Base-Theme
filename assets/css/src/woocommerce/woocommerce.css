@@ -3,6 +3,7 @@
 @import "_single.css";
 @import "_cart.css";
 @import "_checkout.css";
+@import "_forms.css";
 
 /* Change woocommerce colors */
 
@@ -19,63 +20,5 @@
 
 /* Sales color */
 .woocommerce span.onsale {
-	background-color: var(--color-theme-primary);
-}
-
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-	background-color: var(--color-theme-primary);
-	color: #fff;
-	border-radius: 0;
-	font-size: 1.3rem;
-	line-height: var(--global-font-line-height);
-	text-transform: uppercase;
-	font-family: var(--highlight-font-family);
-
-	&:hover,
-	&:focus,
-	&:active {
-		color: #fff;
-		background-color: var(--color-theme-secondary);
-	}
-
-	&.alt {
-		background-color: var(--color-theme-primary);
-
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: var(--color-theme-secondary);
-			color: #fff;
-		}
-	}
-}
-
-.woocommerce #respond input#submit.alt.disabled,
-.woocommerce #respond input#submit.alt.disabled:hover,
-.woocommerce #respond input#submit.alt:disabled,
-.woocommerce #respond input#submit.alt:disabled:hover,
-.woocommerce #respond input#submit.alt:disabled[disabled],
-.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
-.woocommerce a.button.alt.disabled,
-.woocommerce a.button.alt.disabled:hover,
-.woocommerce a.button.alt:disabled,
-.woocommerce a.button.alt:disabled:hover,
-.woocommerce a.button.alt:disabled[disabled],
-.woocommerce a.button.alt:disabled[disabled]:hover,
-.woocommerce button.button.alt.disabled,
-.woocommerce button.button.alt.disabled:hover,
-.woocommerce button.button.alt:disabled,
-.woocommerce button.button.alt:disabled:hover,
-.woocommerce button.button.alt:disabled[disabled],
-.woocommerce button.button.alt:disabled[disabled]:hover,
-.woocommerce input.button.alt.disabled,
-.woocommerce input.button.alt.disabled:hover,
-.woocommerce input.button.alt:disabled,
-.woocommerce input.button.alt:disabled:hover,
-.woocommerce input.button.alt:disabled[disabled],
-.woocommerce input.button.alt:disabled[disabled]:hover {
 	background-color: var(--color-theme-primary);
 }

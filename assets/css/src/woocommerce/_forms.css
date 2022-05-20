@@ -1,0 +1,47 @@
+/* All the Buttons and input fields for woocommerce goes here */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	background-color: var(--color-theme-primary);
+	color: var(--primary-button-text-color);
+	border-radius: 0;
+	font-size: 1.3rem;
+	line-height: var(--global-font-line-height);
+	text-transform: uppercase;
+	font-family: var(--highlight-font-family);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--primary-button-hover-text-color);
+		background-color: var(--color-theme-secondary);
+	}
+
+	&.alt {
+		background-color: var(--color-theme-primary);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: var(--color-theme-secondary);
+			color: var(--primary-button-hover-text-color);
+		}
+	}
+
+	&:disabled,
+	&.alt:disabled {
+		&,
+		&[disabled] {
+			background-color: var(--color-theme-primary);
+			color: var(--primary-button-text-color);
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: var(--color-theme-secondary);
+				color: var(--primary-button-hover-text-color);
+			}
+		}
+	}
+}
