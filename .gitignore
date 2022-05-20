@@ -28,6 +28,7 @@
 !/optional/
 !/templates/
 !/woocommerce/
+!/acf-json/
 
 !.babelrc
 !composer.json

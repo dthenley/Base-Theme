@@ -152,7 +152,7 @@ class Theme {
 			new Scripts\Component(),
 			new Excerpts\Component(),
 			new SVG\Component(),
-			new Yoast\Component(),
+			// new Yoast\Component(),
 		);
 
 		if ( defined( 'JETPACK__VERSION' ) ) {
@@ -163,9 +163,15 @@ class Theme {
 			$components[] = new Woocommerce\Component();
 		}
 
-		// if ( defined( 'WPSEO_Options' ) ) {
-		// 	$components[] = new Yoast\Component();
-		// }
+		if( class_exists('ACF') ) {
+			$components[] = new ACF\Component();
+
+		}
+
+
+		if ( defined( 'WPSEO_VERSION' ) ) {
+			$components[] = new Yoast\Component();
+		}
 
 		return $components;
 	}
