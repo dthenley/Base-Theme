@@ -26,5 +26,10 @@
 				color: inherit;
 			}
 		}
+
+		& .quantity .qty {
+			padding: var(--global-input-padding);
+			font-size: var(--global-button-font-size);
+		}
 	}
 }
