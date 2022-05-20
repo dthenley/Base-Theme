@@ -1,6 +1,6 @@
 {
   "theme": {
-    "PHPNamespace": "Hexcode_Designs\\Site_Name",
+    "PHPNamespace": "Hexcode\\Site_Name",
     "slug": "site-theme",
     "name": "Site Theme",
     "theme_uri": "https://github.com/dthenley/Custom-Theme-V2/",
@@ -20,7 +20,8 @@
       "assets/js/vendor/**/*.js",
       "assets/svg/*.svg",
       "inc/EZ_Customizer/themeCustomizeSettings.json",
-      "acf-json/*.json"
+      "acf-json/*.json",
+      "templates/*.php"
     ]
   }
 }
