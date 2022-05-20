@@ -26,7 +26,11 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	wp_rig()->display_primary_nav_menu(
 		array(
 			'menu_id' => 'primary-menu',
-			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="social-media-main-nav">'.do_shortcode("[yoast-social-media]").'</li></ul>'
+			'items_wrap' => '
+			<ul id="%1$s" class="%2$s">
+			%3$s
+			<li class="social-media-main-nav">'.do_shortcode("[yoast-social-media]").'</li>
+			</ul>'
 		)
 	);
 	?>
