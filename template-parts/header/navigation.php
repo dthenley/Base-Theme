@@ -29,8 +29,8 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 			'items_wrap' => '
 			<ul id="%1$s" class="%2$s">
 			%3$s
-			<li class="social-media-main-nav">'.do_shortcode("[yoast-social-media]").'</li>
-			</ul>'
+			<li class="social-media-main-nav">' . do_shortcode( "[yoast-social-media]" ) . '</li>
+			</ul>',
 		)
 	);
 	?>
