@@ -27,6 +27,7 @@
 !/tests/
 !/optional/
 !/templates/
+!/woocommerce/
 
 !.babelrc
 !composer.json
