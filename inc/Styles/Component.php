@@ -305,11 +305,18 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return wp_rig()->is_primary_sidebar_active();
 				},
 			),
-			'wp-rig-front-page' => array(
-				'file'             => 'front-page.min.css',
+			'wp-rig-transparent-lite-template' => array(
+				'file'             => 'templates/lite-transparent-nav.min.css',
 				'preload_callback' => function() {
 					global $template;
-					return 'front-page.php' === basename( $template );
+					return 'lite-transparent-nav.php' === basename( $template );
+				},
+			),
+			'wp-rig-transparent-dark-template' => array(
+				'file'             => 'templates/dark-transparent-nav.min.css',
+				'preload_callback' => function() {
+					global $template;
+					return 'dark-transparent-nav.php' === basename( $template );
 				},
 			),
 		);

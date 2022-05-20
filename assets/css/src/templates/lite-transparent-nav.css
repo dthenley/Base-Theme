@@ -1,0 +1,9 @@
+.site-header {
+	position: absolute;
+	width: 100%;
+	color: #fff;
+}
+
+.site-main div:first-child.wp-block-cover > .wp-block-cover__inner-container {
+	padding-top: 9.375rem;
+}
