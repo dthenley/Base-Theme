@@ -44,6 +44,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	public function initialize() {
 		add_action( 'after_setup_theme', array( $this, 'action_register_nav_menus' ) );
 		add_filter( 'walker_nav_menu_start_el', array( $this, 'filter_primary_nav_menu_dropdown_symbol' ), 10, 4 );
+		add_action('widgets_init', array( $this, 'navigation_sidebar' ) );
 	}
 
 	/**
@@ -157,5 +158,20 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$args['theme_location'] = static::FOOTER_NAV_MENU_SLUG;
 
 		wp_nav_menu( $args );
+	}
+
+	/**
+	 * Adds a sidebar to header navigation and footer.
+	 */
+	public function navigation_sidebar() {
+		register_sidebar(
+			array(
+				'name' => __( 'Footer Sidebar', 'wp-rig' ),
+				'id'   => 'footer-sidebar',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        		'after_widget'  => '</div>',
+
+			)
+		);
 	}
 }
