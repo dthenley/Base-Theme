@@ -49,6 +49,16 @@
 		margin: 0;
 		text-align: center;
 	}
+
+	& .woocommerce-loop-product__title {
+		border-top: 2px solid var(--color-theme-gray);
+		font-size: 1.75rem;
+	}
+
+	& .woocommerce-Price-amount {
+		font-size: 1.25rem;
+		color: #000;
+	}
 }
 
 .woocommerce .related.products ul.products li.product {
