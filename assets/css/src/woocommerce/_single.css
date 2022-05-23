@@ -9,11 +9,11 @@
 		gap: 1rem;
 
 		& .woocommerce-product-gallery {
-			background: var(--wp--preset--color--gray);
+			background: var(--color-theme-gray);
 		}
 
 		& > .summary {
-			background: var(--wp--preset--color--gray);
+			background: var(--color-theme-gray);
 			padding: clamp(1rem, 3%, 3rem);
 
 			& .product_title {

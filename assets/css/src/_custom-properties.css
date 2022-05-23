@@ -31,6 +31,7 @@
 	--color-theme-white: #fff;
 	--color-theme-primary: var(--color-theme-salmon);
 	--color-theme-secondary: var(--color-theme-black);
+	--border-color-light: var(--color-theme-black);
 
 	/* Button Styling */
 	--primary-button-background-color: var(--color-theme-primary);

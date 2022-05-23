@@ -12,7 +12,7 @@
 	& > aside {
 		max-width: clamp(17rem, 20vw, 22rem);
 		margin-right: 2rem;
-		background-color: var(--wp--preset--color--gray);
+		background-color: var(--color-theme-gray);
 		padding: 1rem;
 	}
 }
