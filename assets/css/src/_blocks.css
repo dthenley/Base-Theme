@@ -227,3 +227,11 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 .street-address-shortcode span {
 	display: block;
 }
+
+/* Social Media Shortcode */
+ul.social-media {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 1rem;
+}
