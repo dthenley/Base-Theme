@@ -186,7 +186,7 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	box-shadow: none;
 	cursor: pointer;
 	display: inline-block;
-	font-size: var(---global-button-font-size);
+	font-size: var(--global-button-font-size);
 	padding: var(--global-button-padding);
 	text-align: center;
 	text-decoration: none;
@@ -207,11 +207,15 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	min-width: 14rem;
 }
 
-.gform_wrapper {
+.gform_wrapper .gfield {
 	& input,
 	& textarea,
 	& select {
 		border-radius: 0;
+		padding: var(--global-button-padding) !important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+		font-size: var(--global-button-font-size);
 	}
 
 	& input[type="submit"] {
