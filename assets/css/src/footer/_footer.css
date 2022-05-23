@@ -17,24 +17,13 @@
 }
 
 .site-footer {
-	background: var(--color-theme-primary);
-	color: #fff;
+	background: var(--color-theme-gray);
 
 	& .main-footer {
 		padding: 1em;
 		max-width: var(--content-wide-width);
 		margin-left: auto;
 		margin-right: auto;
-
-		/*
-		@media (--wide-menu-query) {
-			display: flex;
-
-			& > nav {
-				flex: 1 1 100%;
-			}
-		}
-		*/
 
 		& nav ul {
 			list-style: none;
