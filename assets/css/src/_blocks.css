@@ -222,3 +222,8 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 		width: 100%;
 	}
 }
+
+/* Street address shortcode */
+.street-address-shortcode span {
+	display: block;
+}

@@ -72,43 +72,56 @@ class Component implements Component_Interface {
 	 **/
 	public function street_address() {
 
-		$content             = '';
-		$street_address_list = '';
-		$street_address      = array();
+		$content               = '';
+		$street_address__block = '';
 
-		$address_link = get_field( 'address_link', 'options' );
+		$content = "<div class='street-address-shortcode'>";
+
+		if ( get_field( 'address_link', 'options' ) ) {
+			$street_address__block .= "<a href='". get_field( 'address_link', 'options' )."' class='street-address-shortcode-link' target='_blank' >";
+		}
 
 		if ( get_field( 'street_address', 'options' ) ) {
-			array_push( $street_address, get_field( 'street_address', 'options' ) );
+			$street_address__block .= '<span class="line-1">' . get_field( 'street_address', 'options' ) . '</span>';
 		}
 		if ( get_field( 'street_address_line_2', 'options' ) ) {
-			array_push( $street_address, get_field( 'street_address_line_2', 'options' ) );
-		}
-		if ( get_field( 'city', 'options' ) ) {
-			array_push( $street_address, get_field( 'city', 'options' ) );
-		}
-		if ( get_field( 'state', 'options' ) ) {
-			array_push( $street_address, get_field( 'state', 'options' ) );
-		}
-		if ( get_field( 'zip_code', 'options' ) ) {
-			array_push( $street_address, get_field( 'zip_code', 'options' ) );
+			$street_address__block .= '<span class="line-2">' . get_field( 'street_address_line_2', 'options' ) . '</span>';
+
 		}
 
-		if ( isset( $street_address ) ) {
-			if ( isset( $address_link ) ) {
-				$content = "<a href='$address_link' class='street-address-shortcode-link' target='_blank' >";
-			}
-			$street_address_list .= implode( ', ', $street_address );
-			$content             .= rtrim( $street_address_list, ', ' );
-			if ( isset( $address_link ) ) {
-				$content .= '</a>';
-			}
-			if ( isset( $address_link ) ) {
-				$content .= '</a>';
-			}
-		} else {
-			$content = 'Add street address from theme options';
+		$street_address__block .= '<span class="line-3">';
+		if ( get_field( 'city', 'options' ) ) {
+			$street_address__block .= get_field( 'city', 'options' );
 		}
+		if ( get_field( 'state', 'options' ) ) {
+			if ( get_field( 'city', 'options' ) ) {
+				$street_address__block .= ', ';
+
+			}
+
+			$street_address__block .= get_field( 'state', 'options' ) ;
+
+		}
+		if ( get_field( 'zip_code', 'options' ) ) {
+			$street_address__block .= get_field( 'zip_code', 'options' );
+
+		}
+		$street_address__block .= '</span">';
+
+		if ( get_field( 'address_link', 'options' ) ) {
+			$street_address__block .= "</a>";
+		}
+
+		if ( isset( $street_address__block ) ) {
+			$content .= $street_address__block;
+
+		} else {
+			$content .= 'Add street address from theme options';
+		}
+
+		$content .= '<div><!-- street-address-shortcode-->';
+
+
 		return $content;
 	}
 
