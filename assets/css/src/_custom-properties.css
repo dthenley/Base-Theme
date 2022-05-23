@@ -11,9 +11,8 @@
 	--dropdown-symbol-width: 0.7em;
 
 	/* Typography */
-	--global-font-family: "Crimson Text", serif;
-	--highlight-font-family: "Roboto Condensed", "Helvetica Neue",
-		"Arial Narrow", sans-serif;
+	--global-font-family: "Open Sans", sans-serif;
+	--highlight-font-family: "Raleway", sans-serif;
 	--global-font-size: 1.25rem;
 	--global-font-line-height: 1.4;
 	--global-font-color: #000;
