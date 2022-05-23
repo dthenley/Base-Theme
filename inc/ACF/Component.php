@@ -75,7 +75,7 @@ class Component implements Component_Interface {
 		$content               = '';
 		$street_address__block = '';
 
-		$content = "<div class='street-address-shortcode'>";
+		$content = "<span class='street-address-shortcode'>";
 
 		if ( get_field( 'address_link', 'options' ) ) {
 			$street_address__block .= "<a href='". get_field( 'address_link', 'options' )."' class='street-address-shortcode-link' target='_blank' >";
@@ -119,7 +119,7 @@ class Component implements Component_Interface {
 			$content .= 'Add street address from theme options';
 		}
 
-		$content .= '<div><!-- street-address-shortcode-->';
+		$content .= '</span><!-- street-address-shortcode-->';
 
 
 		return $content;
