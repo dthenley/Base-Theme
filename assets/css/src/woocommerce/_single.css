@@ -4,10 +4,6 @@
 	padding: 0 1rem;
 
 	& .product {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-
 		& .woocommerce-product-gallery {
 			background: var(--color-theme-gray);
 		}
@@ -22,7 +18,7 @@
 			}
 
 			& .price {
-				font-size: 2.75rem;
+				/* font-size: 2.75rem; */
 				color: inherit;
 			}
 		}

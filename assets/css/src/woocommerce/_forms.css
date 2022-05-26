@@ -30,7 +30,9 @@
 	}
 
 	&:disabled,
-	&.alt:disabled {
+	&.alt:disabled,
+	&.disabled,
+	&.alt.disabled {
 		&,
 		&[disabled] {
 			background-color: var(--color-theme-primary);

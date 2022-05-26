@@ -48,6 +48,14 @@
 		width: 100% !important;
 		margin: 0;
 		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		& .button {
+			align-self: flex-end;
+			width: 100%;
+		}
 	}
 
 	& .woocommerce-loop-product__title {
