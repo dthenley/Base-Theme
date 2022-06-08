@@ -103,7 +103,7 @@ class Component implements Component_Interface {
 
 		}
 		if ( get_field( 'zip_code', 'options' ) ) {
-			$street_address__block .= get_field( 'zip_code', 'options' );
+			$street_address__block .= ' ' . get_field( 'zip_code', 'options' );
 
 		}
 		$street_address__block .= '</span">';
