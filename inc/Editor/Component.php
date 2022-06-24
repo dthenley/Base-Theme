@@ -33,6 +33,8 @@ class Component implements Component_Interface {
 	public function initialize() {
 		add_action( 'after_setup_theme', array( $this, 'action_add_editor_support' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_block_styles' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_assets' ) );
+		add_action( 'after_setup_theme', array( $this, 'my_remove_patterns' ) );
 	}
 
 	/**
@@ -132,5 +134,24 @@ class Component implements Component_Interface {
 	public function dequeue_block_styles() {
 		// wp_dequeue_style( 'wp-block-library' );
 		// wp_dequeue_style( 'wp-block-library-theme' );
+	}
+
+	/**
+	 * Remove and Add Gutenberg Styles
+	 */
+	public function editor_assets() {
+		wp_enqueue_script(
+			'remove-block-styles',
+			get_template_directory_uri() . '/assets/js/blocks/block-styles.min.js',
+			array ( 'wp-blocks', 'wp-edit-post' ),
+			'0.1.0'
+		);
+	}
+
+	/**
+	 * Remove Core Block Patterns
+	 */
+	public function my_remove_patterns() {
+		remove_theme_support( 'core-block-patterns' );
 	}
 }
