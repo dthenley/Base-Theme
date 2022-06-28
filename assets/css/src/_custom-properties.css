@@ -24,12 +24,12 @@
 	--font-size-regular: var(--global-font-size);
 
 	/* Custom editor colors */
+	--color-theme-primary: var(--color-theme-salmon);
+	--color-theme-secondary: var(--color-theme-black);
 	--color-theme-salmon: #b9273a;
 	--color-theme-black: #000;
 	--color-theme-gray: #f5f5f5;
 	--color-theme-white: #fff;
-	--color-theme-primary: var(--color-theme-salmon);
-	--color-theme-secondary: var(--color-theme-black);
 	--border-color-light: var(--color-theme-black);
 
 	/* Button Styling */
