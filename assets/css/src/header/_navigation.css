@@ -119,9 +119,18 @@
 				}
 
 				& a {
+					padding: 0.25em;
+					display: inline-block;
+
 					@media (--narrow-menu-query) {
 						display: block;
 						padding: 1rem 0;
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						background: var(--color-theme-primary);
 					}
 				}
 
@@ -135,7 +144,7 @@
 					& .dropdown-toggle {
 						position: absolute;
 						background: transparent;
-						top: 0;
+						top: 0.5em;
 						right: 0;
 						width: 1.5rem;
 						height: 1.5rem;
