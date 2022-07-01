@@ -149,6 +149,7 @@ class Theme {
 			new Scripts\Component(),
 			new Excerpts\Component(),
 			new SVG\Component(),
+			new AMP\Component(),
 		);
 
 		if ( defined( 'JETPACK__VERSION' ) ) {
