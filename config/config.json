@@ -1,9 +1,9 @@
 {
   "theme": {
-    "PHPNamespace": "Hexcode\\Site_Name",
-    "slug": "site-theme",
-    "name": "Site Theme",
-    "theme_uri": "https://github.com/dthenley/Custom-Theme-V2/",
+    "PHPNamespace": "Hexcode\\Base_Theme",
+    "slug": "base-theme",
+    "name": "Base Theme",
+    "theme_uri": "https://github.com/dthenley/Base-Theme",
     "author": "Hexcode Designs",
     "author_uri": "https://hexcodedesigns.com/",
     "description": "A progressive theme development rig for WordPress.",
@@ -19,7 +19,6 @@
       "assets/css/vendor/**/*.css",
       "assets/js/vendor/**/*.js",
       "assets/svg/*.svg",
-      "inc/EZ_Customizer/themeCustomizeSettings.json",
       "acf-json/*.json",
       "templates/*.php"
     ]
