@@ -15,7 +15,8 @@
 	&:focus,
 	&:active {
 		color: var(--primary-button-hover-text-color);
-		background-color: var(--color-theme-secondary);
+		background-color: var(--primary-button-hover-background-color);
+		border-color: var(--primary-button-hover-background-color);
 	}
 
 	&.alt {
@@ -24,8 +25,9 @@
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: var(--color-theme-secondary);
 			color: var(--primary-button-hover-text-color);
+			background-color: var(--primary-button-hover-background-color);
+			border-color: var(--primary-button-hover-background-color);
 		}
 	}
 
@@ -41,8 +43,9 @@
 			&:hover,
 			&:focus,
 			&:active {
-				background-color: var(--color-theme-secondary);
 				color: var(--primary-button-hover-text-color);
+				background-color: var(--primary-button-hover-background-color);
+				border-color: var(--primary-button-hover-background-color);
 			}
 		}
 	}
