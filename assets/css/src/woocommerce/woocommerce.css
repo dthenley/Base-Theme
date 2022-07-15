@@ -31,6 +31,10 @@
 }
 
 /* All in one cart */
+nav .vi-wcaio-menu-cart-content-wrap {
+	min-width: 280px;
+}
+
 .widget_shopping_cart_content > button {
 	display: none;
 }
