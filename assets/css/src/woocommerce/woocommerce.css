@@ -29,3 +29,8 @@
 .woocommerce span.onsale {
 	background-color: var(--color-theme-primary);
 }
+
+/* All in one cart */
+.widget_shopping_cart_content > button {
+	display: none;
+}
