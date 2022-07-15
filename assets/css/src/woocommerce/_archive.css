@@ -97,3 +97,7 @@
 .wc-block-attribute-filter .wc-block-attribute-filter-list li input {
 	margin: 0.5rem;
 }
+
+.woocommerce-products-header__title {
+	margin-top: 0;
+}
