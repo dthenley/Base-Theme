@@ -5,6 +5,10 @@
 	display: flex;
 	padding: 0 1rem;
 
+	@media (max-width: 900px) {
+		flex-wrap: wrap;
+	}
+
 	& > * {
 		flex: 1 1 100%;
 		order: 2;
@@ -13,9 +17,15 @@
 	& > aside {
 		max-width: clamp(17rem, 20vw, 22rem);
 		margin-right: 2rem;
+		margin-bottom: 2rem;
 		background-color: var(--color-theme-gray);
 		padding: 1rem;
 		order: 1;
+
+		@media (max-width: 800px) {
+			max-width: 100%;
+			margin-right: 0;
+		}
 	}
 }
 
