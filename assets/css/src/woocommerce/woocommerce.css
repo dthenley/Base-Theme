@@ -4,6 +4,7 @@
 @import "_cart.css";
 @import "_checkout.css";
 @import "_forms.css";
+@import "../_blocks";
 
 /* Change woocommerce colors */
 
