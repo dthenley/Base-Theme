@@ -35,12 +35,16 @@ class Component implements Component_Interface {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_woo_styles' ) );
 
-		// Remove blog sidebar.
-		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+		// Remove Breadcrumbs.
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
 		// Shop Archive wrapper.
 		add_action( 'woocommerce_before_main_content', array( $this, 'wp_rig_woo_archive_open' ), 1 );
 		add_action( 'woocommerce_sidebar', array( $this, 'wp_rig_woo_archive_close' ), 9999 );
+
+		// Remove blog sidebar.
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
 
 		// Add woocommerce sidebar.
 		add_action( 'widgets_init', array( $this, 'wp_rig_woocommerce_sidebar' ) );
