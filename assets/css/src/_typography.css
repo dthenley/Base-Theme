@@ -28,15 +28,18 @@ h6 {
 	clear: both;
 }
 
-h1 {
+h1,
+.has-large-headline-font-size {
 	font-size: var(--font-size-heading-one);
 }
 
-h2 {
+h2,
+.has-headline-font-size {
 	font-size: var(--font-size-heading-two);
 }
 
-h3 {
+h3,
+.has-sub-headline-font-size {
 	font-size: var(--font-size-heading-three);
 }
 

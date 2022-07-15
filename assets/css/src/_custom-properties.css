@@ -13,18 +13,18 @@
 	/* Typography */
 	--global-font-family: "Open Sans", sans-serif;
 	--highlight-font-family: "Raleway", sans-serif;
-	--global-font-size: 1.25rem;
+	--global-font-size: 1.25rem; /* 20px */
 	--global-font-line-height: 1.4;
 	--global-font-color: #000;
 
 	/* Custom editor font sizes */
-	--font-size-heading-one: 3rem;
-	--font-size-heading-two: 2.25rem;
-	--font-size-heading-three: 1.75rem;
+	--font-size-heading-one: clamp(2.1875rem, calc(2.1rem + 1vw), 3rem);
+	--font-size-heading-two: clamp(1.875rem, calc(1.9rem + 0.38vw), 2.25rem);
+	--font-size-heading-three: clamp(1.375rem, calc(1.4rem + 0.36vw), 1.75rem);
 	--font-size-regular: var(--global-font-size);
 
 	/* Custom editor colors */
-	--color-theme-primary: var(--color-theme-salmon);
+	--color-theme-primary: #0051ba;
 	--color-theme-secondary: var(--color-theme-black);
 	--color-theme-salmon: #b9273a;
 	--color-theme-black: #000;
