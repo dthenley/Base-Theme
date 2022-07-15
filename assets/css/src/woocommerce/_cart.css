@@ -108,6 +108,8 @@
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
 	width: auto;
 	padding: var(--global-button-padding);
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 .woocommerce-cart table.cart .product-thumbnail {

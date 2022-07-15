@@ -17,6 +17,13 @@
 		color: var(--color-theme-primary);
 	}
 }
+.woocommerce-error {
+	border-top-color: #b81c23;
+
+	&::before {
+		color: #b81c23;
+	}
+}
 
 /* Sales color */
 .woocommerce span.onsale {

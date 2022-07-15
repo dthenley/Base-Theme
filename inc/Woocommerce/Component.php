@@ -38,6 +38,10 @@ class Component implements Component_Interface {
 		// Remove blog sidebar.
 		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
+		// Shop Archive wrapper.
+		add_action( 'woocommerce_before_main_content', array( $this, 'wp_rig_woo_archive_open' ), 1 );
+		add_action( 'woocommerce_sidebar', array( $this, 'wp_rig_woo_archive_close' ), 9999 );
+
 		// Add woocommerce sidebar.
 		add_action( 'widgets_init', array( $this, 'wp_rig_woocommerce_sidebar' ) );
 		add_action( 'woocommerce_sidebar', array( $this, 'add_woocommerce_sidebar' ), 5 );
@@ -79,6 +83,20 @@ class Component implements Component_Interface {
 	 */
 	public function load_woo_styles() {
 			wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce.min.css', array(), filemtime( get_template_directory() . '/assets/css/woocommerce/woocommerce.min.css' ), false );
+	}
+
+	/**
+	 * Archive Wrapper Open.
+	 */
+	public function wp_rig_woo_archive_open() {
+		echo '<div class="woo-archive">';
+	}
+
+	/**
+	 * Archive Wrapper Closed.
+	 */
+	public function wp_rig_woo_archive_close() {
+		echo '</div><!-- .woo-archive -->';
 	}
 
 	/**
