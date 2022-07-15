@@ -63,6 +63,7 @@
 .wp-block-cover {
 	display: flex;
 	align-items: center;
+	padding: clamp(2em, 5%, 6em) 0;
 }
 
 .wp-block-cover__inner-container > * {
@@ -199,8 +200,8 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	&:focus,
 	&:active {
 		color: var(--primary-button-hover-text-color);
-		background-color: rgba(185, 39, 58, 0.63);
-		border-color: rgba(185, 39, 58, 0.63);
+		background-color: var(--primary-button-hover-background-color);
+		border-color: var(--primary-button-hover-background-color);
 	}
 }
 
