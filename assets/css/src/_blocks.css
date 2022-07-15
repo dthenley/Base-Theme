@@ -235,3 +235,31 @@ ul.social-media {
 	display: flex;
 	gap: 1rem;
 }
+
+/* List Styles */
+.is-style-no-style {
+	list-style: none;
+	padding-left: 0;
+}
+
+.is-style-styled-list {
+	list-style: none;
+	padding-left: 0;
+
+	& li {
+		padding-left: 1.5rem;
+		position: relative;
+		/* margin-bottom: 0.5rem; */
+
+		&:before {
+			content: "";
+			width: 1rem;
+			height: 1rem;
+			background: var(--color-theme-primary);
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0.35rem;
+		}
+	}
+}
