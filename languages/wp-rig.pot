@@ -181,7 +181,7 @@ msgstr ""
 msgid "No theme component with the slug %s exists."
 msgstr ""
 
-#: inc/Woocommerce/Component.php:108
+#: inc/Woocommerce/Component.php:112
 msgid "Woocommerce Sidebar"
 msgstr ""
 
