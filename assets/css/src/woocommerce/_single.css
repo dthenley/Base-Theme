@@ -5,11 +5,11 @@
 
 	& .product {
 		& .woocommerce-product-gallery {
-			background: var(--color-theme-gray);
+			background: var(--wp--preset--color--gray);
 		}
 
 		& > .summary {
-			background: var(--color-theme-gray);
+			background: var(--wp--preset--color--gray);
 			padding: clamp(1rem, 3%, 3rem);
 
 			& .product_title {

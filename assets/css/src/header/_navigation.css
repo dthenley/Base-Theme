@@ -39,7 +39,7 @@
 			& span {
 				width: 40px;
 				height: 2px;
-				background: var(--color-theme-primary);
+				background: var(--wp--preset--color--primary);
 				display: block;
 				transition: all 0.2s;
 
@@ -74,7 +74,7 @@
 	& > .main-navigation {
 		@media (--narrow-menu-query) {
 			position: fixed;
-			background: var(--color-theme-primary);
+			background: var(--wp--preset--color--primary);
 			color: #fff;
 			z-index: 10;
 			transition: all 0.2s;
@@ -130,7 +130,7 @@
 					&:hover,
 					&:focus,
 					&:active {
-						background: var(--color-theme-primary);
+						background: var(--wp--preset--color--primary);
 					}
 				}
 

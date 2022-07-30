@@ -3,7 +3,7 @@
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-	background-color: var(--color-theme-primary);
+	background-color: var(--wp--preset--color--primary);
 	color: var(--primary-button-text-color);
 	border-radius: 0;
 	font-size: 1.3rem;
@@ -15,16 +15,16 @@
 	&:focus,
 	&:active {
 		color: var(--primary-button-hover-text-color);
-		background-color: var(--color-theme-secondary);
+		background-color: var(--wp--preset--color--secondary);
 	}
 
 	&.alt {
-		background-color: var(--color-theme-primary);
+		background-color: var(--wp--preset--color--primary);
 
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: var(--color-theme-secondary);
+			background-color: var(--wp--preset--color--secondary);
 			color: var(--primary-button-hover-text-color);
 		}
 	}
@@ -35,13 +35,13 @@
 	&.alt.disabled {
 		&,
 		&[disabled] {
-			background-color: var(--color-theme-primary);
+			background-color: var(--wp--preset--color--primary);
 			color: var(--primary-button-text-color);
 
 			&:hover,
 			&:focus,
 			&:active {
-				background-color: var(--color-theme-secondary);
+				background-color: var(--wp--preset--color--secondary);
 				color: var(--primary-button-hover-text-color);
 			}
 		}

@@ -13,7 +13,7 @@
 }
 
 .site-footer {
-	background: var(--color-theme-primary);
+	background: var(--wp--preset--color--primary);
 	color: #fff;
 
 	& .main-footer {

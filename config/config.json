@@ -20,7 +20,8 @@
       "assets/js/vendor/**/*.js",
       "assets/svg/*.svg",
       "acf-json/*.json",
-      "templates/*.php"
+      "templates/*.php",
+      "theme.json"
     ]
   }
 }

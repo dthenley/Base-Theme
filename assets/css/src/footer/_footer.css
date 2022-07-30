@@ -17,7 +17,7 @@
 }
 
 .site-footer {
-	background: var(--color-theme-gray);
+	background: var(--wp--preset--color--gray);
 
 	& .main-footer {
 		padding: 1em;

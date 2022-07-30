@@ -11,14 +11,14 @@
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message {
-	border-color: var(--color-theme-primary);
+	border-color: var(--wp--preset--color--primary);
 
 	&::before {
-		color: var(--color-theme-primary);
+		color: var(--wp--preset--color--primary);
 	}
 }
 
 /* Sales color */
 .woocommerce span.onsale {
-	background-color: var(--color-theme-primary);
+	background-color: var(--wp--preset--color--primary);
 }
