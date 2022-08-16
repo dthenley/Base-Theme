@@ -11,10 +11,17 @@
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message {
-	border-color: var(--wp--preset--color--primary);
+	border-color: var(--color-theme-primary);
 
 	&::before {
-		color: var(--wp--preset--color--primary);
+		color: var(--color-theme-primary);
+	}
+
+	@media (--narrow-menu-query) {
+		& a {
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
 
