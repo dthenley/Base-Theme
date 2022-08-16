@@ -151,7 +151,7 @@
 }
 
 .alignwide {
-	max-width: calc(50% + var(--content-width) / 2);
+	max-width: var(--content-wide-width);
 }
 
 .alignfull {

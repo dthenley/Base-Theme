@@ -107,22 +107,22 @@ class Component implements Component_Interface {
 					'slug'      => 'regular',
 				),
 				array(
-					'name'      => __( 'Heading 3', 'wp-rig' ),
-					'shortName' => __( 'h3', 'wp-rig' ),
-					'size'      => 28,
-					'slug'      => 'heading-three',
-				),
-				array(
-					'name'      => __( 'Heading 2', 'wp-rig' ),
-					'shortName' => __( 'h2', 'wp-rig' ),
-					'size'      => 36,
-					'slug'      => 'heading-two',
-				),
-				array(
-					'name'      => __( 'Heading 1', 'wp-rig' ),
-					'shortName' => __( 'h1', 'wp-rig' ),
+					'name'      => __( 'Large Headline', 'wp-rig' ),
+					'shortName' => __( 'lh', 'wp-rig' ),
 					'size'      => 48,
-					'slug'      => 'heading-one',
+					'slug'      => 'large-headline',
+				),
+				array(
+					'name'      => __( 'Headline', 'wp-rig' ),
+					'shortName' => __( 'h', 'wp-rig' ),
+					'size'      => 36,
+					'slug'      => 'headline',
+				),
+				array(
+					'name'      => __( 'Sub Headline', 'wp-rig' ),
+					'shortName' => __( 'sh', 'wp-rig' ),
+					'size'      => 28,
+					'slug'      => 'sub-headline',
 				),
 			)
 		);

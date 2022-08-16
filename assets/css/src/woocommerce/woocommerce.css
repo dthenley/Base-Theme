@@ -4,6 +4,7 @@
 @import "_cart.css";
 @import "_checkout.css";
 @import "_forms.css";
+@import "../_blocks";
 
 /* Change woocommerce colors */
 
@@ -24,8 +25,24 @@
 		}
 	}
 }
+.woocommerce-error {
+	border-top-color: #b81c23;
+
+	&::before {
+		color: #b81c23;
+	}
+}
 
 /* Sales color */
 .woocommerce span.onsale {
 	background-color: var(--wp--preset--color--primary);
+}
+
+/* All in one cart */
+nav .vi-wcaio-menu-cart-content-wrap {
+	min-width: 280px;
+}
+
+.widget_shopping_cart_content > button {
+	display: none;
 }

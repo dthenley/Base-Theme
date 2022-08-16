@@ -65,19 +65,21 @@
 
 form.woocommerce-checkout {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1rem;
 	padding-top: 0;
 	margin-bottom: 5%;
-
-	@media (--narrow-menu-query) {
-		flex-wrap: wrap;
-	}
 
 	& > * {
 		flex: 1 1 100%;
 		padding: 2rem 1rem;
 		background: #f7f6f7;
 		/* border: 2px solid var(--wp--preset--color--primary); */
+
+		&.form-fillable {
+			max-width: calc(100% - clamp(24rem, 33%, 100%) - 1em);
+			min-width: 24rem;
+		}
 
 		&.checkout-rig-review {
 			max-width: clamp(24rem, 33%, 100%);
