@@ -314,3 +314,10 @@ were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+/* Social Media Shortcode */
+.social-media-shortcode {
+	& svg {
+		fill: var(--wp--preset--color--black);
+	}
+}

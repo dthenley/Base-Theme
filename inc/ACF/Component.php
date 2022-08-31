@@ -33,7 +33,7 @@ class Component implements Component_Interface {
 		add_action( 'after_setup_theme', array( $this, 'add_acf_theme_options' ), 10, 2 );
 		add_shortcode( 'phone', array( $this, 'phone' ) );
 		add_shortcode( 'street-address', array( $this, 'street_address' ) );
-		// add_shortcode( 'social-media', array( $this, 'social_media' ) );
+		add_shortcode( 'social-media', array( $this, 'social_media' ) );
 
 	}
 	/**
@@ -128,32 +128,44 @@ class Component implements Component_Interface {
 	/**
 	 *  Add [social-media] shortcode. pulls from theme settings.
 	 **/
-	// public function social_media() {
+	public function social_media() {
 
-	// 	$content = '';
+		$content = '';
 
-	// 	if ( have_rows( 'social_accounts', 'options' ) ) {
-	// 		$content = '<ul class="social-media-shortcode">';
+		if ( have_rows( 'social_accounts', 'options' ) ) {
+			$content = '<ul class="social-media-shortcode">';
 
-	// 		while ( have_rows( 'social_accounts', 'options' ) ) {
-	// 			the_row();
+			while ( have_rows( 'social_accounts', 'options' ) ) {
+				the_row();
+				$link = get_sub_field( 'link' );
+				$icon = get_sub_field( 'icon' );
+				$site_name = get_bloginfo( 'name' );
 
-	// 			$content .= '<li>';
-	// 			$content .= '<a href="';
-	// 			$content .= get_sub_field( 'link' );
-	// 			$content .= '" target="_blank">';
-	// 			$content .= get_sub_field( 'font_awesome_icon' );
-	// 			$content .= '</a>';
-	// 			$content .= '</li>';
+				if ( get_sub_field( 'social_name' ) ) {
+					$social_name = get_sub_field( 'social_name' );
+					$content .= "<li><a href='$link' alt='Follow $site_name on $social_name'>$icon</a></li>";
+				} else {
+					$content .= "<li><a href='$link' >$icon</a></li>";
+				}
 
-	// 		}
+				/*
+				$content .= '<li>';
+				$content .= '<a href="';
+				$content .= get_sub_field( 'link' );
+				$content .= '" target="_blank">';
+				$content .= get_sub_field( 'icon' );
+				$content .= '</a>';
+				$content .= '</li>';
+				*/
 
-	// 		$content .= '</ul>';
-	// 	} else {
-	// 		$content = 'Add social media in theme options';
-	// 	}
+			}
 
-	// 	return $content;
-	// }
+			$content .= '</ul>';
+		} else {
+			$content = 'Add social media in theme options';
+		}
+
+		return $content;
+	}
 
 }
