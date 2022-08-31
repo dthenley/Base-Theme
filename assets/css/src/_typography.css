@@ -17,29 +17,6 @@ textarea {
 }
 /* stylelint-enable */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
-	clear: both;
-}
-
-h1 {
-	font-size: var(--font-size-heading-one);
-}
-
-h2 {
-	font-size: var(--font-size-heading-two);
-}
-
-h3 {
-	font-size: var(--font-size-heading-three);
-}
-
 .entry-title-singular,
 .page-title {
 	font-size: 2.5rem;
