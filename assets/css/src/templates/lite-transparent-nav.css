@@ -1,9 +1,13 @@
 .site-header {
 	position: absolute;
 	width: 100%;
-	color: #fff;
+	color: var(--global-lite-font-color);
 }
 
 .site-main div:first-child.wp-block-cover > .wp-block-cover__inner-container {
-	padding-top: 9.375rem;
+	padding-top: 5.375rem;
+}
+
+.site-header--inner > .menu-toggle span {
+	background: var(--global-lite-font-color);
 }
