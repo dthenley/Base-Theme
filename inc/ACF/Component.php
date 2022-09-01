@@ -60,7 +60,7 @@ class Component implements Component_Interface {
 		$phone_number = get_field( 'phone_number', 'options' );
 		$content      = '';
 		if ( isset( $phone_number ) ) {
-			$content = "<a href='tel:$phone_number' class='phone-shortcode'>$phone_number</a>";
+			$content = "<p><a href='tel:$phone_number' class='phone-shortcode'>$phone_number</a></p>";
 		} else {
 			$content = 'Add phone number from theme options';
 		}
@@ -75,7 +75,7 @@ class Component implements Component_Interface {
 		$content               = '';
 		$street_address__block = '';
 
-		$content = "<span class='street-address-shortcode'>";
+		$content = "<p><span class='street-address-shortcode'>";
 
 		if ( get_field( 'address_link', 'options' ) ) {
 			$street_address__block .= "<a href='". get_field( 'address_link', 'options' )."' class='street-address-shortcode-link' target='_blank' >";
@@ -119,7 +119,7 @@ class Component implements Component_Interface {
 			$content .= 'Add street address from theme options';
 		}
 
-		$content .= '</span><!-- street-address-shortcode-->';
+		$content .= '</span></p><!-- street-address-shortcode-->';
 
 
 		return $content;
