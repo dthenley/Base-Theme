@@ -108,12 +108,18 @@
           "size": "2.4375rem",
           "name": "Extra Large"
         }
-      ]
+      ],
+      "fluid": true
+    },
+    "custom": {
+      "spacing": {
+        "baseline": "1rem"
+      }
     }
   },
   "styles": {
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--global)",
+      "fontFamily": "var(--wp--preset--font-size--medium)",
       "fontSize": "var(--wp--preset--font-size--medium)",
       "lineHeight": "1.4"
     },

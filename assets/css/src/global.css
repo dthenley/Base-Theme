@@ -317,7 +317,31 @@ were hidden (via .neverending) before. */
 
 /* Social Media Shortcode */
 .social-media-shortcode {
-	& svg {
-		fill: var(--wp--preset--color--black);
+	list-style: none;
+	padding: 0;
+
+	& > li {
+		display: inline-block;
+		margin-right: 1rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media (--narrow-media-query) {
+				font-size: 2rem;
+				width: 3rem;
+				height: 3rem;
+			}
+
+			& svg {
+				fill: var(--wp--preset--color--black);
+			}
+		}
 	}
 }
