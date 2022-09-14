@@ -3,29 +3,25 @@
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
-/* stylelint-disable */
 a {
-	/* color: var(--color-link); */
-	/* text-decoration: none; */
-}
-/* stylelint-enable */
+	&,
+	&:visited {
+		text-decoration: underline;
+	}
 
-a:visited {
-	/* color: var(--color-link-visited); */
-}
+	&:hover,
+	&:focus,
+	&:active {
+		/* color: var(--color-link-active); */
+		text-decoration: none;
+	}
 
-a:hover,
-a:focus,
-a:active {
-	/* color: var(--color-link-active); */
-	/* text-decoration: underline; */
-}
+	&:focus {
+		outline: thin dotted;
+	}
 
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
+	&:hover,
+	&:active {
+		outline: 0;
+	}
 }
