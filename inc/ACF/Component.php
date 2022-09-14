@@ -34,8 +34,10 @@ class Component implements Component_Interface {
 		add_shortcode( 'phone', array( $this, 'phone' ) );
 		add_shortcode( 'street-address', array( $this, 'street_address' ) );
 		add_shortcode( 'social-media', array( $this, 'social_media' ) );
-
 	}
+
+
+
 	/**
 	 *  Adds ACF Options Menu
 	 *
@@ -50,6 +52,8 @@ class Component implements Component_Interface {
 				)
 			);
 		}
+
+		add_image_size('header-logo',200,80,true );
 
 	}
 
