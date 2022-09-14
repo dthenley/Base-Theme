@@ -37,17 +37,21 @@
 	display: flex;
 	align-items: center;
 	padding: clamp(2em, 5%, 6em) 0;
-}
 
-.wp-block-cover__inner-container > * {
-	max-width: var(--content-width);
-	margin-left: auto;
-	margin-right: auto;
-}
+	& .has-background-dim:not([class*="-background-color"]) {
+		background: transparent;
+	}
 
-.wp-block-cover .wp-block-cover-text,
-.wp-block-cover p {
-	margin-top: 0;
+	& .wp-block-cover__inner-container > * {
+		max-width: var(--content-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	& .wp-block-cover-text,
+	& p {
+		margin-top: 0;
+	}
 }
 
 /* Column Block */
