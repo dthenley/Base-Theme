@@ -296,13 +296,15 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			'wp-rig-sidebar'    => array(
 				'file'             => 'sidebar.min.css',
 				'preload_callback' => function() {
-					return wp_rig()->is_primary_sidebar_active();
+					global $template;
+					return ( (wp_rig()->is_primary_sidebar_active()) && ( ! in_array( basename( $template ), array( '404.php', '500.php', 'offline.php', 'page.php' ) ) ) )  ;
 				},
 			),
 			'wp-rig-widgets'    => array(
 				'file'             => 'widgets.min.css',
 				'preload_callback' => function() {
-					return wp_rig()->is_primary_sidebar_active();
+					global $template;
+					return ( (wp_rig()->is_primary_sidebar_active()) && ( ! in_array( basename( $template ), array( '404.php', '500.php', 'offline.php', 'page.php' ) ) ) )  ;
 				},
 			),
 			'wp-rig-transparent-lite-template' => array(
