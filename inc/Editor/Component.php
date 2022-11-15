@@ -7,6 +7,7 @@
 
 namespace WP_Rig\WP_Rig\Editor;
 
+use function WP_Rig\WP_Rig\wp_rig;
 use WP_Rig\WP_Rig\Component_Interface;
 use function add_action;
 use function add_theme_support;
@@ -70,7 +71,7 @@ class Component implements Component_Interface {
 			'remove-block-styles',
 			get_template_directory_uri() . '/assets/js/blocks/block-styles.min.js',
 			array ( 'wp-blocks', 'wp-edit-post' ),
-			'0.1.0'
+			wp_rig()->get_asset_version( get_theme_file_path(get_template_directory_uri() . '/assets/js/blocks/block-styles.min.js'))
 		);
 	}
 
