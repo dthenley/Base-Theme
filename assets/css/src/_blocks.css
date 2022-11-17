@@ -167,6 +167,10 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 }
 
 /* Buttons */
+.wp-block-button__link {
+	text-align: left;
+}
+/*
 .wp-block-button__link,
 .gform_wrapper input[type="submit"] {
 	color: var(--primary-button-text-color);
@@ -197,6 +201,7 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 .wp-block-button__link {
 	min-width: 14rem;
 }
+*/
 
 .gform_wrapper .gfield {
 	& input,
