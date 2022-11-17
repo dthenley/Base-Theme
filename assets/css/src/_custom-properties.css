@@ -14,7 +14,7 @@
 	--global-lite-font-color: #fff;
 
 	/* Button Styling */
-	--primary-button-background-color: var(--wp--preset--color--primary);
+	/* --primary-button-background-color: var(--wp--preset--color--primary);
 	--primary-button-text-color: #fff;
 	--primary-button-hover-background-color: var(--wp--preset--color--primary);
 	--primary-button-hover-text-color: #fff;
@@ -25,4 +25,5 @@
 	--global-button-padding: calc(0.667em + 2px) calc(1.333em + 2px);
 	--global-button-font-size: 1.125rem;
 	--global-input-padding: calc(0.667em + 2px) 5px;
+	*/
 }

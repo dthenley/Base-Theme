@@ -34,27 +34,15 @@
 
 /* Cover Block */
 .wp-block-cover {
-	display: flex;
-	align-items: center;
-	padding: clamp(2em, 5%, 6em) 0;
-
-	& .has-background-dim:not([class*="-background-color"]) {
-		background: transparent;
-	}
-
 	& .wp-block-cover__inner-container > * {
 		max-width: var(--content-width);
 		margin-left: auto;
 		margin-right: auto;
 	}
-
-	& .wp-block-cover-text,
-	& p {
-		margin-top: 0;
-	}
 }
 
 /* Column Block */
+/*
 .wp-block-columns {
 	margin-bottom: 0;
 }
@@ -63,8 +51,10 @@
 		padding: 1rem;
 	}
 }
+*/
 
 /* Latest Block Posts */
+/*
 
 .wp-block-latest-posts,
 .wp-block-latest-comments {
@@ -79,6 +69,8 @@ ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignfull {
 	padding: 0 1.5em;
 }
+
+
 
 /*--------------------------------------------------------------
 # Gallery Block - overrides core styles
@@ -169,6 +161,7 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 /* Buttons */
 .wp-block-button__link {
 	text-align: left;
+	border: 0;
 }
 /*
 .wp-block-button__link,
@@ -203,6 +196,7 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 }
 */
 
+/*
 .gform_wrapper .gfield {
 	& input,
 	& textarea,
@@ -216,6 +210,7 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 }
+*/
 
 /* Street address shortcode */
 .street-address-shortcode span {
@@ -259,10 +254,18 @@ ul.social-media {
 }
 
 /* Media + Text Block */
-.wp-block-media-text__media {
-	& img,
-	& video {
-		width: auto;
-		max-width: 100%;
+.wp-block-media-text {
+
+	& .wp-block-media-text__media {
+		& img,
+		& video {
+			width: auto;
+			max-width: 100%;
+		}
 	}
+
+	& .wp-block-media-text__content {
+		padding: 0;
+	}
+
 }
