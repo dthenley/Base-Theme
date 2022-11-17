@@ -29,12 +29,12 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#b9273a"
+          "color": "#0D243E"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#cccccc"
+          "color": "#FFD000"
         },
         {
           "name": "Blue",
@@ -149,33 +149,34 @@
 					"radius": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--white)"
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--black)"
+				},
+        ":visited": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+            "text": "var(--wp--preset--color--black)"
+					}
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--black)"
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":focus": {
 					"color": {
-            "background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--base)"
+            "background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--base)"
-					}
-				},
-				":visited": {
-					"color": {
 						"background": "var(--wp--preset--color--primary)",
-            "text": "var(--wp--preset--color--white)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				}
+
 			},
       "h1": {
         "typography": {
@@ -212,6 +213,24 @@
           "fontFamily": "var(--wp--preset--font-family--highlight)"
         }
       }
-		}
+		},
+    "blocks": {
+      "core/cover": {
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--80)",
+            "bottom": "var(--wp--preset--spacing--80)"
+          }
+        }
+      },
+      "core/columns": {
+        "spacing": {
+          "margin": {
+            "bottom": "0",
+            "top": "0"
+          }
+        }
+      }
+    }
   }
 }
