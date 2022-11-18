@@ -27,7 +27,13 @@
 			align-items: center;
 			justify-content: space-between;
 
-			& > #menu-top-right {
+			& > .top-left-nav-menu {
+				font-size: 1.1em;
+				font-family: var(--wp--preset--font-family--highlight);
+				text-transform: uppercase;
+			}
+
+			& > .top-right-nav-menu {
 				font-size: 1rem;
 			}
 		}

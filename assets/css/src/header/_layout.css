@@ -2,6 +2,10 @@
 	padding: 1em;
 	position: relative;
 	z-index: 10;
+	font-size: 1.1em;
+	font-family: var(--wp--preset--font-family--highlight);
+	text-transform: uppercase;
+
 
 	& .site-header--inner {
 		max-width: var(--content-wide-width);
