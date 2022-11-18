@@ -159,9 +159,9 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 }
 
 /* Buttons */
-.wp-block-button__link {
+.wp-block-buttons > .wp-block-button > .wp-block-button__link {
 	text-align: left;
-	border: 0;
+	min-width: 16.25rem;
 }
 /*
 .wp-block-button__link,
