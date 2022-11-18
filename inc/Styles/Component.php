@@ -370,7 +370,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		$google_fonts = array(
 			'Open Sans' => array( '400', '400i', '700', '700i' ),
-			'Raleway'     => array( '400', '400i', '800', '800i' ),
+			'Teko'     => array( '600', '600i' ),
 		);
 
 		/**
