@@ -51,3 +51,7 @@
 		opacity: 0.4;
 	}
 }
+
+.wp-block-buttons .wp-block-button .wp-block-button__link {
+	min-width: 16.25rem !important;
+}

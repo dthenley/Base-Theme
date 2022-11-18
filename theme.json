@@ -154,7 +154,8 @@
           "padding": {
             "top": "0.8125rem",
             "bottom": "0.8125rem",
-            "left": "1.25rem"
+            "left": "1.25rem",
+            "right": "1.25rem"
           }
         },
 				"border": {
@@ -162,29 +163,29 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--secondary)",
-					"text": "var(--wp--preset--color--black)"
+					"text": "var(--wp--preset--color--white)"
 				},
         ":visited": {
 					"color": {
 						"background": "var(--wp--preset--color--secondary)",
-            "text": "var(--wp--preset--color--black)"
+            "text": "var(--wp--preset--color--white)"
 					}
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--primary)",
+						"background": "var(--wp--preset--color--secondary)",
 						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":focus": {
 					"color": {
-            "background": "var(--wp--preset--color--primary)",
+            "background": "var(--wp--preset--color--secondary)",
 						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--primary)",
+						"background": "var(--wp--preset--color--secondary)",
 						"text": "var(--wp--preset--color--white)"
 					}
 				}

@@ -29,7 +29,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 			'items_wrap' => '
 			<ul id="%1$s" class="%2$s">
 			%3$s
-			<li class="social-media-main-nav">' . do_shortcode( "[social-media]" ) . '</li>
+			<li class="social-media-main-nav hide-desktop">' . do_shortcode( "[social-media]" ) . '</li>
 			</ul>',
 		)
 	);
