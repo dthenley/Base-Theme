@@ -8,8 +8,8 @@ wp.domReady(() => {
 	wp.blocks.unregisterBlockStyle("core/quote", "large");
 
 	// button
-	wp.blocks.unregisterBlockStyle("core/button", "fill");
-	wp.blocks.unregisterBlockStyle("core/button", "outline");
+	// wp.blocks.unregisterBlockStyle("core/button", "fill");
+	// wp.blocks.unregisterBlockStyle("core/button", "outline");
 
 	// pullquote
 	wp.blocks.unregisterBlockStyle("core/pullquote", "default");
