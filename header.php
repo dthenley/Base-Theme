@@ -27,6 +27,11 @@ namespace WP_Rig\WP_Rig;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-rig' ); ?></a>
 
+	<div class="site-header--top-nav">
+		<div class="site-header--top-nav--inner">
+			<?php get_template_part( 'template-parts/header/navigation-top' ); ?>
+		</div><!-- .site-header--top-nav--inner -->
+	</div><!-- .site-header--top-nav -->
 	<header id="masthead" class="site-header">
 		<div class="site-header--inner">
 			<?php get_template_part( 'template-parts/header/branding' ); ?>

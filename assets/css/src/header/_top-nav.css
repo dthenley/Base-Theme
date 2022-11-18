@@ -1,0 +1,38 @@
+.site-header--top-nav{
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+	padding: 1.625rem 1rem;
+
+	& a {
+		color: inherit;
+		text-decoration: none;
+
+	}
+
+	& ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 1em;
+	}
+
+	& > .site-header--top-nav--inner {
+		max-width: var(--content-wide-width);
+		margin: 0 auto;
+
+
+		& > nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			& > #menu-top-right {
+				font-size: 1rem;
+			}
+		}
+	}
+
+
+
+}

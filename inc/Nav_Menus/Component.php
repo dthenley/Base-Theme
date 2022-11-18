@@ -27,6 +27,8 @@ use function wp_nav_menu;
 class Component implements Component_Interface, Templating_Component_Interface {
 
 	const PRIMARY_NAV_MENU_SLUG = 'primary';
+	const TOP_LEFT_NAV_MENU_SLUG  = 'top-left-nav';
+	const TOP_RIGHT_NAV_MENU_SLUG  = 'top-right-nav';
 	const FOOTER_NAV_MENU_SLUG  = 'footer';
 
 	/**
@@ -58,6 +60,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return array(
 			'is_primary_nav_menu_active' => array( $this, 'is_primary_nav_menu_active' ),
 			'display_primary_nav_menu'   => array( $this, 'display_primary_nav_menu' ),
+			'is_top_left_nav_menu_active'  => array( $this, 'is_top_left_nav_menu_active' ),
+			'display_top_left_nav_menu'    => array( $this, 'display_top_left_nav_menu' ),
+			'is_top_right_nav_menu_active'  => array( $this, 'is_top_right_nav_menu_active' ),
+			'display_top_right_nav_menu'    => array( $this, 'display_top_right_nav_menu' ),
 			'is_footer_nav_menu_active'  => array( $this, 'is_footer_nav_menu_active' ),
 			'display_footer_nav_menu'    => array( $this, 'display_footer_nav_menu' ),
 		);
@@ -69,6 +75,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	public function action_register_nav_menus() {
 		register_nav_menus(
 			array(
+				static::TOP_LEFT_NAV_MENU_SLUG => esc_html__( 'Top Left Nav', 'wp-rig' ),
+				static::TOP_RIGHT_NAV_MENU_SLUG => esc_html__( 'Top Right Nav', 'wp-rig' ),
 				static::PRIMARY_NAV_MENU_SLUG => esc_html__( 'Primary', 'wp-rig' ),
 				static::FOOTER_NAV_MENU_SLUG  => esc_html__( 'Footer', 'wp-rig' ),
 			)
@@ -120,6 +128,24 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
+	 * Checks whether the top left navigation menu is active.
+	 *
+	 * @return bool True if the top left navigation menu is active, false otherwise.
+	 */
+	public function is_top_left_nav_menu_active() : bool {
+		return (bool) has_nav_menu( static::TOP_LEFT_NAV_MENU_SLUG );
+	}
+
+	/**
+	 * Checks whether the top  navigation menu is active.
+	 *
+	 * @return bool True if the top  navigation menu is active, false otherwise.
+	 */
+	public function is_top_right_nav_menu_active() : bool {
+		return (bool) has_nav_menu( static::TOP_RIGHT_NAV_MENU_SLUG );
+	}
+
+	/**
 	 * Checks whether the footer navigation menu is active.
 	 *
 	 * @return bool True if the primary navigation menu is active, false otherwise.
@@ -145,6 +171,41 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
+	 * Displays the top left navigation menu.
+	 *
+	 * @param array $args Optional. Array of arguments. See `wp_nav_menu()` documentation for a list of supported
+	 *                    arguments.
+	 */
+	public function display_top_left_nav_menu( array $args = array() ) {
+		if ( ! isset( $args['container'] ) ) {
+			$args['container'] = '';
+		}
+
+		$args['theme_location'] = static::TOP_LEFT_NAV_MENU_SLUG;
+		$args['depth'] = 1;
+
+
+		wp_nav_menu( $args );
+	}
+
+	/**
+	 * Displays the top right navigation menu.
+	 *
+	 * @param array $args Optional. Array of arguments. See `wp_nav_menu()` documentation for a list of supported
+	 *                    arguments.
+	 */
+	public function display_top_right_nav_menu( array $args = array() ) {
+		if ( ! isset( $args['container'] ) ) {
+			$args['container'] = '';
+		}
+
+		$args['theme_location'] = static::TOP_RIGHT_NAV_MENU_SLUG;
+		$args['depth'] = 1;
+
+		wp_nav_menu( $args );
+	}
+
+	/**
 	 * Displays the footer navigation menu.
 	 *
 	 * @param array $args Optional. Array of arguments. See `wp_nav_menu()` documentation for a list of supported
@@ -156,6 +217,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$args['theme_location'] = static::FOOTER_NAV_MENU_SLUG;
+		$args['depth'] = 1;
 
 		wp_nav_menu( $args );
 	}
