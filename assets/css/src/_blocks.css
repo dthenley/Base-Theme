@@ -4,34 +4,6 @@
 ## Blocks
 --------------------------------------------------------------*/
 
-/*
- * Available block selectors:
- * .wp-block-image
- * .wp-block-media-text
- * .wp-block-gallery
- * .wp-block-audio
- * .wp-block-video
- * .wp-block-quote
- * .wp-block-cover
- * .wp-block-file
- * .wp-block-button
- * .wp-block-gallery
- * .wp-block-table
- * .wp-block-embed
- * .wp-block-audio
- * .wp-block-pullquote
- * .wp-block-preformatted
- * .wp-block-code
- * .wp-block-verse
- * .wp-block-table
- * .wp-block-separator
- * .wp-block-columns
- * .wp-block-column
- * .wp-block-latest-posts
- * .wp-block-categories
- * .wp-block-archives
- */
-
 /* Cover Block */
 .wp-block-cover {
 	& .wp-block-cover__inner-container > * {
@@ -40,37 +12,6 @@
 		margin-right: auto;
 	}
 }
-
-/* Column Block */
-/*
-.wp-block-columns {
-	margin-bottom: 0;
-}
-.wp-block-column {
-	&.has-background {
-		padding: 1rem;
-	}
-}
-*/
-
-/* Latest Block Posts */
-/*
-
-.wp-block-latest-posts,
-.wp-block-latest-comments {
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
-	border: 1px solid hsl(0, 0%, 80%);
-}
-
-ul.wp-block-latest-posts.alignwide,
-ul.wp-block-latest-posts.alignfull,
-ul.wp-block-latest-posts.is-grid.alignwide,
-ul.wp-block-latest-posts.is-grid.alignfull {
-	padding: 0 1.5em;
-}
-
-
 
 /*--------------------------------------------------------------
 # Gallery Block - overrides core styles
@@ -163,54 +104,6 @@ ul.wp-block-latest-posts.is-grid.alignfull {
 	text-align: left;
 	min-width: 16.25rem;
 }
-/*
-.wp-block-button__link,
-.gform_wrapper input[type="submit"] {
-	color: var(--primary-button-text-color);
-	background-color: var(--wp--preset--color--primary);
-	border: 2px solid var(--wp--preset--color--primary);
-	border-radius: 0;
-	box-shadow: none;
-	cursor: pointer;
-	display: inline-block;
-	font-size: var(--global-button-font-size);
-	padding: var(--global-button-padding);
-	text-align: center;
-	text-decoration: none;
-	overflow-wrap: break-word;
-	box-sizing: border-box;
-	transition: all 0.2s;
-	text-transform: uppercase;
-
-	&:hover,
-	&:focus,
-	&:active {
-		color: var(--primary-button-hover-text-color);
-		background-color: var(--primary-button-hover-background-color);
-		border-color: var(--primary-button-hover-background-color);
-	}
-}
-
-.wp-block-button__link {
-	min-width: 14rem;
-}
-*/
-
-/*
-.gform_wrapper .gfield {
-	& input,
-	& textarea,
-	& select {
-		border-radius: 0;
-		padding: var(--global-button-padding) !important;
-		padding-left: 0.75rem !important;
-		padding-right: 0.75rem !important;
-		font-size: var(--global-button-font-size);
-		border-color: transparent;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	}
-}
-*/
 
 /* Street address shortcode */
 .street-address-shortcode span {
@@ -238,7 +131,6 @@ ul.social-media {
 	& li {
 		padding-left: 1.5rem;
 		position: relative;
-		/* margin-bottom: 0.5rem; */
 
 		&:before {
 			content: "";
@@ -255,6 +147,7 @@ ul.social-media {
 
 /* Media + Text Block */
 .wp-block-media-text {
+	gap: 2em;
 
 	& .wp-block-media-text__media {
 		& img,
