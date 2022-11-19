@@ -21,7 +21,7 @@
     },
     "color": {
       "customDuotone": false,
-      "customGradient": false,
+      "customGradient": true,
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
@@ -59,12 +59,12 @@
         {
           "name": "Black",
           "slug": "black",
-          "color": "#1c2833"
+          "color": "#000000"
         },
         {
           "name": "White",
           "slug": "white",
-          "color": "#ecf0f1"
+          "color": "#ffffff"
         }
       ]
     },
