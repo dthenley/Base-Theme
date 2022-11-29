@@ -3,8 +3,8 @@
 @import "_single.css";
 @import "_cart.css";
 @import "_checkout.css";
-@import "_forms.css";
-@import "../_blocks";
+@import "_buttons.css";
+@import "./_blocks.css";
 
 /* Change woocommerce colors */
 

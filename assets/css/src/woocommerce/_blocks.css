@@ -1,0 +1,69 @@
+/* Wc Block Grid */
+.wc-block-grid {
+
+	& .wc-block-grid__products {
+		gap: 1rem;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		& .wc-block-grid__product {
+			background: var(--wp--preset--color--primary);
+			color: var(--wp--preset--color--white);
+			max-width: 100%;
+			border: none;
+			text-align: left;
+			padding: 0!important;
+
+			& a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			& .wc-block-grid__product-image {
+				background: var(--wp--preset--color--white);
+
+				& img {
+					margin: 0 auto;
+				}
+			}
+
+			& .wc-block-grid__product-title {
+				font-size: 1.125rem;
+				padding-left: .5rem;
+				padding-right: .5rem;
+			}
+
+			& .wc-block-grid__product-price {
+				margin: 0;
+				margin-bottom: .5rem;
+				padding-left: .5rem;
+				padding-right: .5rem;
+				font-size: 1rem;
+			}
+
+			& .wp-block-button {
+				margin: 0;
+				padding-left: .5rem;
+				padding-right: .5rem;
+
+				& .wp-block-button__link {
+					font-size: 1.125rem;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+
+	&.has-4-columns {
+
+		@media (--wide-menu-query) {
+			& .wc-block-grid__products {
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+
+			}
+		}
+
+	}
+
+}
