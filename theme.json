@@ -156,10 +156,6 @@
           "radius": false,
           "style": false,
           "width": false
-        },
-        "color": {
-          "background": "transparent",
-          "text": "var(--wp--preset--color--white)"
         }
       }
     }
@@ -189,34 +185,33 @@
 					"radius": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--secondary)",
+          "background": "transparent",
 					"text": "var(--wp--preset--color--white)"
 				},
         ":visited": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
+
             "text": "var(--wp--preset--color--white)"
 					}
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
+
 						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":focus": {
 					"color": {
-            "background": "var(--wp--preset--color--secondary)",
+
 						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
+
 						"text": "var(--wp--preset--color--white)"
 					}
 				}
-
 			},
       "h1": {
         "typography": {
