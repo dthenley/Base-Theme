@@ -85,7 +85,7 @@ class Component implements Component_Interface {
 		wp_register_script(
 			'custom-attributes',
 			get_template_directory_uri() . '/build/index.js',
-			[ 'wp-blocks', 'wp-dom', 'wp-dom-ready', 'wp-edit-post' ],
+			[],
 			wp_rig()->get_asset_version( get_theme_file_path(get_template_directory_uri() . '/build/index.js'))
 		);
 		wp_enqueue_script( 'custom-attributes' );
