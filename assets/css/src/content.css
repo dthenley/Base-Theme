@@ -198,23 +198,3 @@
 	}
 }
 
-/* Utilities */
-@media (--narrow-menu-query) {
-	.hide-mobile {
-		display: none;
-	}
-	.style-editor .hide-mobile {
-		display: block;
-		opacity: 0.4;
-	}
-}
-
-@media (--wide-menu-query) {
-	.hide-desktop {
-		display: none;
-	}
-	.style-editor .hide-desktop {
-		display: block;
-		opacity: 0.4;
-	}
-}

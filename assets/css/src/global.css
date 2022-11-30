@@ -345,3 +345,17 @@ were hidden (via .neverending) before. */
 		}
 	}
 }
+
+/* Utilities */
+@media (--narrow-menu-query) {
+	.hide-mobile {
+		display: none;
+	}
+
+}
+
+@media (--wide-menu-query) {
+	.hide-desktop {
+		display: none;
+	}
+}

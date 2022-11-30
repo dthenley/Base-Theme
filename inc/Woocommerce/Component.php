@@ -125,16 +125,17 @@ class Component implements Component_Interface {
 	public function add_woocommerce_sidebar() {
 		?>
 
-		<aside id="woocommerce-sidebar" class="sidebar primary-sidebar">
-			<?php if ( is_active_sidebar( 'woocommerce-sidebar' ) ) : ?>
-				<?php dynamic_sidebar( 'woocommerce-sidebar' ); ?>
-			<?php else : ?>
-				<!-- Time to add some widgets! -->
-			<?php endif; ?>
-		</aside>
+		<?php if ( !is_singular() ) : ?>
+			<aside id="woocommerce-sidebar" class="sidebar primary-sidebar">
+				<?php if ( is_active_sidebar( 'woocommerce-sidebar' ) ) : ?>
+					<?php dynamic_sidebar( 'woocommerce-sidebar' ); ?>
+				<?php else : ?>
+					<!-- Time to add some widgets! -->
+				<?php endif; ?>
+			</aside>
+		<?php endif; ?>
 
 		<?php
 	}
 
 }
-
