@@ -36,6 +36,8 @@ class Component implements Component_Interface {
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_block_styles' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_assets' ) );
 		add_action( 'after_setup_theme', array( $this, 'my_remove_patterns' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'call_custom_attributes_script' ) );
+
 	}
 
 	/**
@@ -75,4 +77,19 @@ class Component implements Component_Interface {
 	public function my_remove_patterns() {
 		remove_theme_support( 'core-block-patterns' );
 	}
+
+	/**
+	 * Call Custom Attributes JS
+	 */
+	public function call_custom_attributes_script() {
+		wp_register_script(
+			'custom-attributes',
+			get_template_directory_uri() . '/build/index.js',
+			[ 'wp-blocks', 'wp-dom', 'wp-dom-ready', 'wp-edit-post' ],
+			wp_rig()->get_asset_version( get_theme_file_path(get_template_directory_uri() . '/build/index.js'))
+		);
+		wp_enqueue_script( 'custom-attributes' );
+	}
+
+
 }
