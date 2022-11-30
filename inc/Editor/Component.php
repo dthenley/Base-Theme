@@ -47,12 +47,6 @@ class Component implements Component_Interface {
 
 		// Add support for default block styles.
 		add_theme_support( 'wp-block-styles' );
-
-		// Add support for wide-aligned images.
-		add_theme_support( 'align-wide' );
-
-		// Add Custom Spacing.
-		add_theme_support( 'custom-spacing' );
 	}
 
 	/**
