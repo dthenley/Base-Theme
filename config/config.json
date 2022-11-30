@@ -21,7 +21,8 @@
       "assets/svg/*.svg",
       "acf-json/*.json",
       "templates/*.php",
-      "theme.json"
+      "theme.json",
+      "build/*"
     ]
   }
 }

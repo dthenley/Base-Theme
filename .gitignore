@@ -30,6 +30,7 @@
 !/woocommerce/
 !/acf-json/
 !/theme.json
+!babel.config.js
 
 !.babelrc
 !composer.json
