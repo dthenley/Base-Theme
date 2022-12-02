@@ -8,10 +8,33 @@
 # Cover Block - overrides core styles
 --------------------------------------------------------------*/
 .wp-block-cover {
+
 	& .wp-block-cover__inner-container > * {
 		max-width: var(--content-width);
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	&.is-style-styled-cover::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--wp--preset--color--primary);
+		clip-path: polygon(100% 61%, 0% 100%, 100% 100%);
+		z-index: 2;
+	}
+
+	&.is-style-styled-cover::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--wp--preset--color--secondary);
+		clip-path: polygon(0 81%, 0% 100%, 46% 100%);
+		z-index: 1;
+	}
+
+	&.is-style-styled-cover > .wp-block-cover__inner-container {
+		z-index: 3;
 	}
 }
 
@@ -36,6 +59,7 @@
 }
 
 @media screen and (min-width: 48em) {
+
 	.entry-content .wp-block-gallery {
 		padding-right: 0;
 		padding-left: 0;
@@ -67,6 +91,7 @@
 }
 
 @media screen and (min-width: 40em) {
+
 	.wp-block-gallery.columns-2 {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -111,7 +136,7 @@
 	min-width: clamp(1px, 22.5rem, 100%);/* added in the editor css */
 	display: flex;
 	justify-content: space-between;
-	align-items:center;
+	align-items: center;
 
 	gap: 1em;
 
@@ -124,7 +149,7 @@
 
 	&::before {
 		background: var(--wp--preset--color--secondary);
-		content: '';
+		content: "";
 		z-index: -1;
 		position: absolute;
 		top: 0;
@@ -136,27 +161,30 @@
 		transition: transform 0.25s ease-in-out;
 	}
 
-	&:after {
-		content:var(--white-arrow);
+	&::after {
+		content: var(--white-arrow);
 	}
 
 	&:hover,
 	&:focus,
-	&:active{
+	&:active {
 		cursor: pointer;
+
 		&::before {
 			transform-origin: center left;
 			transform: scaleX(1);
 		}
 
-		&:after {
-			content:var(--white-arrow);
+		&::after {
+			content: var(--white-arrow);
 		}
 	}
 }
+
 .wp-block-buttons .wp-block-button {
 
-	&.is-style-outline{
+	&.is-style-outline {
+
 		& .wp-block-button__link {
 			border: 2px solid var(--wp--preset--color--secondary);
 
@@ -176,6 +204,7 @@
 	gap: 2em;
 
 	& .wp-block-media-text__media {
+
 		& img,
 		& video {
 			width: auto;
@@ -204,7 +233,7 @@
 		padding-left: 1.5rem;
 		position: relative;
 
-		&:before {
+		&::before {
 			content: "";
 			width: 1rem;
 			height: 1rem;
