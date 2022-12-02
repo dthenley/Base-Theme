@@ -11,16 +11,15 @@ import { addFilter } from '@wordpress/hooks';
 /**
  * External dependencies
  */
-import classnames from 'classnames'
+import classnames from 'classnames';
 
 /**
  * Creates an allow list of components
  */
 const enableSidebarSelectOnBlocks = [
 	'core/image',
-	'core/media-text'
+	'core/media-text',
 ];
-
 
 /**
  * Declare our custom attribute
@@ -28,23 +27,20 @@ const enableSidebarSelectOnBlocks = [
  *
  * @link https://developer.wordpress.org/block-editor/reference-guides/filters/block-filters/#blocks-registerblocktype
  */
-function addCaptionAttribute(settings, name, attributes) {
-
-	if (!enableSidebarSelectOnBlocks.includes(name)) {
+function addCaptionAttribute( settings, name, attributes ) {
+	if ( ! enableSidebarSelectOnBlocks.includes( name ) ) {
 		return settings;
 	}
 
-	let imgAttributes = settings.attributes;
-	let newAttribute = {
-		captionPosition: { type: 'string' }
-	}
+	const imgAttributes = settings.attributes;
+	const newAttribute = {
+		captionPosition: { type: 'string' },
+	};
 
-	settings.attributes = Object.assign(imgAttributes, newAttribute)
+	settings.attributes = Object.assign( imgAttributes, newAttribute );
 
 	return settings;
-
-
-};
+}
 addFilter(
 	'blocks.registerBlockType',
 	'custom-attributes/set-sidebar-select-attribute',
@@ -55,15 +51,14 @@ addFilter(
  * Add Custom Select to Image Sidebar
  */
 const withSidebarSelect = createHigherOrderComponent(
-	(BlockEdit) => {
-		return (props) => {
-
+	( BlockEdit ) => {
+		return ( props ) => {
 			// console.log(props)
 
 			// If current block is not allowed
-			if (!enableSidebarSelectOnBlocks.includes(props.name)) {
+			if ( ! enableSidebarSelectOnBlocks.includes( props.name ) ) {
 				return (
-					<BlockEdit {...props} />
+					<BlockEdit { ...props } />
 				);
 			}
 
@@ -72,41 +67,41 @@ const withSidebarSelect = createHigherOrderComponent(
 
 			return (
 				<Fragment>
-					<BlockEdit {...props} />
+					<BlockEdit { ...props } />
 					<InspectorControls>
 						<PanelBody
-							title={__('Image Caption Position', 'wp-rig')}
+							title={ __( 'Image Caption Position', 'wp-rig' ) }
 						>
 							<SelectControl
-								label={__('Caption Position', 'wp-rig')}
-								value={captionPosition}
-								options={[
+								label={ __( 'Caption Position', 'wp-rig' ) }
+								value={ captionPosition }
+								options={ [
 									{
-										label: __('None'),
-										value: ''
+										label: __( 'None' ),
+										value: '',
 									},
 									{
-										label: __('Top Left'),
-										value: 'top-left'
+										label: __( 'Top Left' ),
+										value: 'top-left',
 									},
 									{
-										label: __('Top Right'),
-										value: 'top-right'
+										label: __( 'Top Right' ),
+										value: 'top-right',
 									},
 									{
-										label: __('Bottom Left'),
-										value: 'bottom-left'
+										label: __( 'Bottom Left' ),
+										value: 'bottom-left',
 									},
 									{
-										label: __('Bottom Right'),
-										value: 'bottom-right'
-									}
-								]}
-								onChange={(value) => {
-									setAttributes({
+										label: __( 'Bottom Right' ),
+										value: 'bottom-right',
+									},
+								] }
+								onChange={ ( value ) => {
+									setAttributes( {
 										captionPosition: value,
-									});
-								}}
+									} );
+								} }
 							/>
 						</PanelBody>
 					</InspectorControls>
@@ -126,26 +121,24 @@ addFilter(
 /**
  * Add custom class to block in Edit
  */
-const withSidebarSelectProp = createHigherOrderComponent((BlockListBlock) => {
-	return (props) => {
-
+const withSidebarSelectProp = createHigherOrderComponent( ( BlockListBlock ) => {
+	return ( props ) => {
 		// If current block is not allowed
-		if (!enableSidebarSelectOnBlocks.includes(props.name)) {
+		if ( ! enableSidebarSelectOnBlocks.includes( props.name ) ) {
 			return (
-				<BlockListBlock {...props} />
+				<BlockListBlock { ...props } />
 			);
 		}
 
 		const { attributes } = props;
 		const { captionPosition } = attributes;
 
-		if (captionPosition) {
-			return <BlockListBlock {...props} className={'has-option-' + captionPosition} />
-		} else {
-			return <BlockListBlock {...props} />
+		if ( captionPosition ) {
+			return <BlockListBlock { ...props } className={ 'has-option-' + captionPosition } />;
 		}
+		return <BlockListBlock { ...props } />;
 	};
-}, 'withSidebarSelectProp');
+}, 'withSidebarSelectProp' );
 
 addFilter(
 	'editor.BlockListBlock',
@@ -153,16 +146,15 @@ addFilter(
 	withSidebarSelectProp
 );
 
-
 /**
  * Save our custom attribute
  */
-const saveSidebarSelectAttribute = (extraProps, blockType, attributes) => {
+const saveSidebarSelectAttribute = ( extraProps, blockType, attributes ) => {
 	// Do nothing if it's another block than our defined ones.
-	if (enableSidebarSelectOnBlocks.includes(blockType.name)) {
+	if ( enableSidebarSelectOnBlocks.includes( blockType.name ) ) {
 		const { captionPosition } = attributes;
-		if (captionPosition) {
-			extraProps.className = classnames(extraProps.className, 'has-option-' + captionPosition)
+		if ( captionPosition ) {
+			extraProps.className = classnames( extraProps.className, 'has-option-' + captionPosition );
 		}
 	}
 

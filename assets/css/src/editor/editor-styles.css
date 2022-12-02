@@ -41,12 +41,14 @@
 
 /* Utilities match content.css */
 @media (--narrow-menu-query) {
+
 	.hide-mobile {
 		opacity: 0.4;
 	}
 }
 
 @media (--wide-menu-query) {
+
 	.hide-desktop {
 		opacity: 0.4;
 	}

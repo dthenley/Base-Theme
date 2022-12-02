@@ -17,6 +17,9 @@ import { pipeline } from 'mississippi';
 /**
  * Internal dependencies
  */
+/**
+ * Internal dependencies
+ */
 import { rootPath, paths, gulpPlugins, isProd } from './constants';
 import {
 	getThemeConfig,
