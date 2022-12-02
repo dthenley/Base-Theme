@@ -53,5 +53,6 @@
 !screenshot.png
 !.travis.yml
 !.browserslistrc
+!patterns
 
 *.DS_Store
