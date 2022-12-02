@@ -44,7 +44,7 @@ msgstr ""
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/ACF/Component.php:48, inc/Customizer/Component.php:78
+#: inc/ACF/Component.php:50, inc/Customizer/Component.php:78
 msgid "Theme Options"
 msgstr ""
 
@@ -67,69 +67,29 @@ msgstr ""
 msgid "New comment(s)"
 msgstr ""
 
-#: inc/Editor/Component.php:72
-msgid "Salmon"
-msgstr ""
-
-#: inc/Editor/Component.php:77
-msgid "Black"
-msgstr ""
-
-#: inc/Editor/Component.php:82
-msgid "White"
-msgstr ""
-
-#: inc/Editor/Component.php:87
-msgid "Gray"
-msgstr ""
-
-#: inc/Editor/Component.php:104
-msgid "Regular"
-msgstr ""
-
-#: inc/Editor/Component.php:105
-msgid "R"
-msgstr ""
-
-#: inc/Editor/Component.php:110
-msgid "Large Headline"
-msgstr ""
-
-#: inc/Editor/Component.php:111
-msgid "lh"
-msgstr ""
-
-#: inc/Editor/Component.php:116
-msgid "Headline"
-msgstr ""
-
-#: inc/Editor/Component.php:117
-msgid "h"
-msgstr ""
-
-#: inc/Editor/Component.php:122
-msgid "Sub Headline"
-msgstr ""
-
-#: inc/Editor/Component.php:123
-msgid "sh"
-msgstr ""
-
 #. translators: %s: Post title.
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/Excerpts/Component.php:44, template-parts/content/entry_content.php:18
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/Nav_Menus/Component.php:72
+#: inc/Nav_Menus/Component.php:78
+msgid "Top Left Nav"
+msgstr ""
+
+#: inc/Nav_Menus/Component.php:79
+msgid "Top Right Nav"
+msgstr ""
+
+#: inc/Nav_Menus/Component.php:80
 msgid "Primary"
 msgstr ""
 
-#: inc/Nav_Menus/Component.php:73
+#: inc/Nav_Menus/Component.php:81
 msgid "Footer"
 msgstr ""
 
-#: inc/Nav_Menus/Component.php:169
+#: inc/Nav_Menus/Component.php:231
 msgid "Footer Sidebar"
 msgstr ""
 
@@ -323,8 +283,12 @@ msgstr ""
 msgid "Page navigation"
 msgstr ""
 
-#: template-parts/footer/info.php:21
+#: template-parts/footer/info.php:22
 msgid "Site by %s "
+msgstr ""
+
+#: template-parts/header/navigation-top.php:16
+msgid "Top Navigation"
 msgstr ""
 
 #: template-parts/header/navigation.php:16
