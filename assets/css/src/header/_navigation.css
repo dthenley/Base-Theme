@@ -10,13 +10,15 @@
 	color: inherit;
 
 	& > .site-branding {
+		display: inline-flex;
+
 		@media (--narrow-menu-query) {
 			z-index: 11;
 		}
 
 		& .custom-logo-link {
 			display: inline-block;
-			margin: 0 auto 1em;
+			margin: 0;
 		}
 	}
 
@@ -72,6 +74,7 @@
 	}
 
 	& > .main-navigation {
+
 		@media (--narrow-menu-query) {
 			position: fixed;
 			background: var(--wp--preset--color--primary);
@@ -92,6 +95,7 @@
 		}
 
 		& .menu {
+
 			&,
 			& ul {
 				list-style: none;
@@ -123,8 +127,9 @@
 					display: inline-block;
 					position: relative;
 
-					  &::before, &::after {
-						content: '';
+					&::before,
+					&::after {
+						content: "";
 						position: absolute;
 						left: 0;
 						right: 0;
@@ -132,28 +137,30 @@
 						background-color: var(--wp--preset--color--secondary);
 						transform: scaleX(0);
 						transition: transform 0.5s ease;
-					  }
+					}
 
-					  &::before {
+					&::before {
 						top: 0;
 						transform-origin: center right;
-					  }
+					}
 
-					  &::after {
+					&::after {
 						bottom: 0;
 						transform-origin: center left;
-					  }
-					  &:hover,
-					  &:focus,
-					  &:active {
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+
 						&::before {
-						  transform-origin: center left;
-						  transform: scaleX(1);
+							transform-origin: center left;
+							transform: scaleX(1);
 						}
 
 						&::after {
-						  transform-origin: center right;
-						  transform: scaleX(1);
+							transform-origin: center right;
+							transform: scaleX(1);
 						}
 					}
 
@@ -246,6 +253,7 @@
 
 					&:hover > .sub-menu,
 					&:focus > .sub-menu {
+
 						@media (--wide-menu-query) {
 							display: block;
 						}

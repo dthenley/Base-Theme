@@ -1,5 +1,5 @@
 .site-header {
-	padding: 1em;
+	padding: 0.25rem 1rem;
 	position: relative;
 	z-index: 10;
 	font-size: 1.1em;
@@ -45,6 +45,7 @@
 }
 
 .social-media-main-nav {
+
 	& svg {
 		fill: #000;
 	}
@@ -54,6 +55,7 @@
 	}
 
 	& > ul {
+
 		& li {
 			margin-right: 0;
 		}
