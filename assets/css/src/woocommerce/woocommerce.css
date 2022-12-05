@@ -5,6 +5,7 @@
 @import "_checkout.css";
 @import "_buttons.css";
 @import "./_blocks.css";
+@import "./_navigation-cart.css";
 
 /* Change woocommerce colors */
 
@@ -20,12 +21,14 @@
 	}
 
 	@media (--narrow-menu-query) {
+
 		& a {
 			width: 100%;
 			text-align: center;
 		}
 	}
 }
+
 .woocommerce-error {
 	border-top-color: #b81c23;
 

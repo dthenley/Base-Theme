@@ -51,7 +51,7 @@
 			}
 
 			&[aria-expanded="true"] span {
-				background: #fff;
+				background: var(--wp--preset--color--primary);
 				position: absolute;
 				top: 50%;
 				left: 0;
@@ -77,13 +77,12 @@
 
 		@media (--narrow-menu-query) {
 			position: fixed;
-			background: var(--wp--preset--color--primary);
-			color: #fff;
+			background: var(--wp--preset--color--grey);
+			color: var(--wp--preset--color--primary);
 			z-index: 10;
 			transition: all 0.2s;
 			left: 100%;
 			right: 0;
-			bottom: 100%;
 			width: 100vw;
 			height: 100vh;
 			overflow: scroll;
@@ -134,7 +133,7 @@
 						left: 0;
 						right: 0;
 						height: 2px;
-						background-color: var(--wp--preset--color--secondary);
+						background-color: var(--wp--preset--color--primary);
 						transform: scaleX(0);
 						transition: transform 0.5s ease;
 					}
@@ -262,7 +261,10 @@
 
 				@media (--narrow-menu-query) {
 					flex: 1 1 100%;
-					text-align: center;
+					text-align: left;
+					border-bottom: #bebebe 1px solid;
+					padding-left: 1rem;
+					padding-right: 1rem;
 				}
 			}
 		}

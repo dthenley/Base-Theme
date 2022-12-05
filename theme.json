@@ -37,6 +37,11 @@
           "color": "#FFD000"
         },
         {
+          "name": "Grey",
+          "slug": "grey",
+          "color": "#E9E9E9"
+        },
+        {
           "name": "Blue",
           "slug": "blue",
           "color": "#14074f"

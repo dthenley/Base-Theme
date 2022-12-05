@@ -1,0 +1,49 @@
+
+/* # WooCommerce Cart Icon CSS with FontAwesome 5
+---------------------------------------------------------------------------------------------------- */
+.primary-nav-cart {
+	z-index: 10;
+	justify-content: flex-end;
+	align-items: center;
+
+	@media (--narrow-menu-query) {
+		display: flex;
+	}
+}
+
+.cart-contents {
+	position: relative;
+	display: inline-flex !important;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	& svg {
+		width: 2rem;
+		height: 2rem;
+		fill: var(--wp--preset--color--primary);
+	}
+
+	& .cart-contents-count {
+		position: absolute;
+		top: 15px;
+		right: 1px;
+		transform: translateY(-105%) translateX(25%);
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 1em;
+		height: 1.5em;
+		width: 1.5em;
+		color: var(--wp--preset--color--primary);
+		background: var(--wp--preset--color--secondary);
+		border-radius: 50%;
+		padding: 1px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
