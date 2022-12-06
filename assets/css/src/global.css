@@ -79,6 +79,7 @@
 }
 
 @media (--sidebar-query) {
+
 	.has-sidebar .site {
 		margin: 0 1em;
 		display: grid;
@@ -209,6 +210,7 @@ select {
 }
 
 @media (--content-query) {
+
 	.site-main .comment-navigation,
 	.site-main .posts-navigation,
 	.site-main .post-navigation,
@@ -305,6 +307,7 @@ select {
 .infinite-scroll .posts-navigation,
 .infinite-scroll .pagination,
 .infinite-scroll.neverending .site-footer {
+
 	/* Theme Footer (when set to scrolling) */
 	display: none;
 }
@@ -348,14 +351,16 @@ were hidden (via .neverending) before. */
 
 /* Utilities */
 @media (--narrow-menu-query) {
+
 	.hide-mobile {
-		display: none;
+		display: none !important;
 	}
 
 }
 
 @media (--wide-menu-query) {
+
 	.hide-desktop {
-		display: none;
+		display: none !important;
 	}
 }
