@@ -5,8 +5,14 @@
  * External dependencies
  */
 export const gulpPlugins = require( 'gulp-load-plugins' )();
+/**
+ * External dependencies
+ */
 import path from 'path';
 
+/**
+ * Internal dependencies
+ */
 /**
  * Internal dependencies
  */
@@ -50,10 +56,10 @@ export const nameFieldDefaults = {
 	slug: 'wp-rig',
 	name: 'WP Rig',
 	theme_uri: 'https://github.com/wprig/wprig/',
-	author: 'The WP Rig Contributors',
+	author: 'Theme Author',
 	author_uri: 'https://wprig.io/',
-	description: 'A progressive theme development rig for WordPress.',
-	version: '2.2.0',
+	description: 'A custom theme for WordPress.',
+	version: '2.3.0',
 	underscoreCase: 'wp_rig',
 	constant: 'WP_RIG',
 	camelCase: 'WpRig',
