@@ -17,6 +17,12 @@
 	flex-flow: column nowrap;
 	justify-content: center;
 
+	@media (--narrow-menu-query) {
+
+		width: 3rem;
+		height: 3rem;
+	}
+
 	&:hover {
 		text-decoration: none;
 	}
